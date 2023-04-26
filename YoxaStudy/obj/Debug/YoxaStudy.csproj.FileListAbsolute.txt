@@ -48,3 +48,9 @@ C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\bin\Debug\Microsoft.Xaml.Behavior
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\App.baml
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\YoxaStudy.csproj.CopyComplete
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\YoxaStudy_Content.g.cs

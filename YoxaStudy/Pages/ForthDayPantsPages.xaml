@@ -79,7 +79,7 @@
         <Button x:Name="fivethDayBtn"
                 Click="fivethDayBtn_Click" 
                 Grid.Row="7"
-                Height="80">
+                Height="80" Cursor="Hand">
             <TextBlock Text="День пятый: сборка"
                        TextWrapping="Wrap"
                        FontSize="22"

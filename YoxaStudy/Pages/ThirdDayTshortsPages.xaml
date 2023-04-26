@@ -106,64 +106,60 @@
         </Button>
 
         <materialDesign:Card Grid.ColumnSpan="3"
-                             Grid.Column="2"
+                             Grid.Column="1"
                              Grid.Row="1"
-                             Grid.RowSpan="8">
+                             Grid.RowSpan="8"
+                             Margin="20 0 0 0">
             <TabControl Width="770"
                         materialDesign:ColorZoneAssist.Mode="PrimaryLight"
                         Style="{StaticResource MaterialDesignFilledTabControl}">
                  <TabItem Header="ФУТБОЛКИ" 
                           Cursor="Hand">
-                    <ScrollViewer>
-                        <StackPanel>
-                            <StackPanel>
-                                <TextBlock Margin="8"
-                                       Foreground="White"
-                                       Text="Футболка Regular"
-                                       FontWeight="DemiBold"
-                                       HorizontalAlignment="Left"
-                                       FontSize="20"/>
-                                <TextBlock Margin="8"
-                                       Foreground="White"
-                                       Text="Размерный ряд: S, M, L, XL"
-                                       FontWeight="DemiBold"
-                                       HorizontalAlignment="Left"
-                                       FontSize="20"/>
-                                <TextBlock Margin="8"
-                                       Foreground="White"
-                                       Text="Основное полотоно: кашкорсе тонкое"
-                                       TextWrapping="Wrap"
-                                       FontWeight="DemiBold"
-                                       HorizontalAlignment="Left"
-                                       FontSize="20"/>
-                                <Image Source="/Resurses/tshortRegular.png"
-                                   Height="250"/>
-                            </StackPanel>
-                            <StackPanel>
-                                <TextBlock Margin="8"
-                                       Foreground="White"
-                                       Text="Футболка Regular"
-                                       FontWeight="DemiBold"
-                                       HorizontalAlignment="Left"
-                                       FontSize="20"/>
-                                <TextBlock Margin="8"
-                                       Foreground="White"
-                                       Text="Размерный ряд: S, M, L, XL"
-                                       FontWeight="DemiBold"
-                                       HorizontalAlignment="Left"
-                                       FontSize="20"/>
-                                <TextBlock Margin="8"
-                                       Foreground="White"
-                                       Text="Основное полотоно: кашкорсе тонкое"
-                                       TextWrapping="Wrap"
-                                       FontWeight="DemiBold"
-                                       HorizontalAlignment="Left"
-                                       FontSize="20"/>
-                                <Image Source="/Resurses/tshortRegular.png"
-                                   Height="250"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </ScrollViewer>
+                    <StackPanel>
+                        <ListView ItemsSource="{Binding products}">
+                            <ListView.View>
+                                <GridView>
+                                    <GridView.Columns>
+                                        <GridViewColumn Header="Фото"
+                                                        Width="200">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Image Source="/Resurses/tshortRegular.png"
+                                                       Height="200"/>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                        <GridViewColumn Header="Название"
+                                                        Width="200">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding TypeClothes.Name}"
+                                                               Foreground="White"
+                                                               FontSize="24"/>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                        <GridViewColumn Header="Название"
+                                                        Width="200">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="Размерный ряд: S, M, L, XL"/>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                        <GridViewColumn Header="Полотно"
+                                                        Width="200">
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding TypeMaterial.Name}"/>
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                    </GridView.Columns>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </StackPanel>
                 </TabItem>
                 <TabItem Header="ЛОНГСЛИВЫ">
                     <ScrollViewer>
