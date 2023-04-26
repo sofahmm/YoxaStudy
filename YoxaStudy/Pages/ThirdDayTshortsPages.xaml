@@ -1,0 +1,275 @@
+﻿<Page x:Class="YoxaStudy.Pages.ThirdDayTshortsPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:YoxaStudy.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ThirdDayTshortsPages">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Image Source="/Resurses/user.jpg"
+               Grid.RowSpan="2"/>
+        <TextBlock Text="Флегматов Енокентий"
+                   FontSize="22"
+                   TextWrapping="Wrap"
+                   Grid.Row="2"
+                   TextAlignment="Center"/>
+
+        <Button x:Name="firstDayBtn"
+                Click="firstDayBtn_Click"
+                Grid.Row="3"
+                Height="80">
+            <TextBlock TextWrapping="Wrap"
+                       Text="День первый: ткани"
+                       TextAlignment="Center"
+                       FontSize="22"/>
+        </Button>
+        <Button x:Name="secondDayBtn"
+                Click="secondDayBtn_Click"
+                Grid.Row="4"
+                Height="80">
+            <TextBlock Text="День второй: оборудование"
+                       TextWrapping="Wrap"
+                       FontSize="22"
+                       TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="thirdDayBtn"
+                Click="thirdDayBtn_Click"
+                Grid.Row="5"
+                Height="80"
+                Background="SlateGray">
+            <TextBlock Text="День третий: футболки, лонгсливы, свитшоты"
+                       TextWrapping="Wrap"
+                       FontSize="20"
+                       TextAlignment="Center"
+                       FontWeight="DemiBold"/>
+        </Button>
+        <Button x:Name="forthDayBtn"
+                Click="forthDayBtn_Click"
+                Grid.Row="6"
+                Height="80">
+            <TextBlock Text="День четвертый: брюки, шорты, леггинсы"
+                       TextWrapping="Wrap"
+                       FontSize="19"
+                       TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="fivethDayBtn"
+                Click="fivethDayBtn_Click"
+                Grid.Row="7"
+                Height="80">
+            <TextBlock Text="День пятый: сборка"
+                       TextWrapping="Wrap"
+                       FontSize="22"
+                       TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="sixthDayBtn"
+                Click="sixthDayBtn_Click"
+                Grid.Row="8"
+                Height="80">
+            <TextBlock Text="День шестой: итоговый тест"
+                       TextWrapping="Wrap"
+                       FontSize="22"
+                       TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="logOutBtn"
+                Click="logOutBtn_Click"
+                Grid.Row="9"
+                Height="80">
+            <TextBlock Text="ВЫЙТИ"
+                       TextWrapping="Wrap"
+                       FontSize="20"
+                       TextAlignment="Center"/>
+        </Button>
+
+        <materialDesign:Card Grid.ColumnSpan="3"
+                             Grid.Column="2"
+                             Grid.Row="1"
+                             Grid.RowSpan="8">
+            <TabControl Width="770"
+                        materialDesign:ColorZoneAssist.Mode="PrimaryLight"
+                        Style="{StaticResource MaterialDesignFilledTabControl}">
+                 <TabItem Header="ФУТБОЛКИ" 
+                          Cursor="Hand">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <StackPanel>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Футболка Regular"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Размерный ряд: S, M, L, XL"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Основное полотоно: кашкорсе тонкое"
+                                       TextWrapping="Wrap"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <Image Source="/Resurses/tshortRegular.png"
+                                   Height="250"/>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Футболка Regular"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Размерный ряд: S, M, L, XL"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Основное полотоно: кашкорсе тонкое"
+                                       TextWrapping="Wrap"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <Image Source="/Resurses/tshortRegular.png"
+                                   Height="250"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="ЛОНГСЛИВЫ">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <StackPanel>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Футболка Regular"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Размерный ряд: S, M, L, XL"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Основное полотоно: кашкорсе тонкое"
+                                       TextWrapping="Wrap"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <Image Source="/Resurses/tshortRegular.png"
+                                   Height="250"/>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Футболка Regular"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Размерный ряд: S, M, L, XL"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Основное полотоно: кашкорсе тонкое"
+                                       TextWrapping="Wrap"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <Image Source="/Resurses/tshortRegular.png"
+                                   Height="250"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="СВИТШОТЫ">
+                    <ScrollViewer>
+                        <StackPanel>
+                            <StackPanel>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Футболка Regular"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Размерный ряд: S, M, L, XL"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Основное полотоно: кашкорсе тонкое"
+                                       TextWrapping="Wrap"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <Image Source="/Resurses/tshortRegular.png"
+                                   Height="250"/>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Футболка Regular"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Размерный ряд: S, M, L, XL"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <TextBlock Margin="8"
+                                       Foreground="White"
+                                       Text="Основное полотоно: кашкорсе тонкое"
+                                       TextWrapping="Wrap"
+                                       FontWeight="DemiBold"
+                                       HorizontalAlignment="Left"
+                                       FontSize="20"/>
+                                <Image Source="/Resurses/tshortRegular.png"
+                                   Height="250"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+            </TabControl>
+        </materialDesign:Card>
+    </Grid>
+</Page>
