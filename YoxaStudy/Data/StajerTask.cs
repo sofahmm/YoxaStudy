@@ -12,20 +12,14 @@ namespace YoxaStudy.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class TypeMaterial
+    public partial class StajerTask
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TypeMaterial()
-        {
-            this.Task = new HashSet<Task>();
-        }
-    
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public byte[] Image { get; set; }
+        public Nullable<int> IdStajer { get; set; }
+        public Nullable<int> IdTask { get; set; }
+        public Nullable<bool> IsDone { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Task> Task { get; set; }
+        public virtual Stajer Stajer { get; set; }
+        public virtual Task Task { get; set; }
     }
 }

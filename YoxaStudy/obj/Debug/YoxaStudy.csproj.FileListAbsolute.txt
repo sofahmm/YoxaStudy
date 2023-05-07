@@ -54,3 +54,5 @@ C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\bin\Debug\EntityFramework.xml
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\YoxaStudy_Content.g.cs
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\CabinetUserPage.g.cs
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\CabinetUserPage.baml

@@ -6,6 +6,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="IdTypeClothe" Type="int" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -14,6 +15,8 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdClothes" Type="int" />
     <Property Name="IdTypeMaterial" Type="int" />
+    <Property Name="Image" Type="varbinary(max)" />
+    <Property Name="IsDone" Type="bit" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -25,6 +28,13 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
+  <EntityType Name="TypeClothe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="TypeMaterial">
     <Key>
       <PropertyRef Name="ID" />
@@ -32,6 +42,18 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="50" />
   </EntityType>
+  <Association Name="FK_Clothe_TypeClothe">
+    <End Role="TypeClothe" Type="Self.TypeClothe" Multiplicity="0..1" />
+    <End Role="Clothe" Type="Self.Clothe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeClothe">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Clothe">
+        <PropertyRef Name="IdTypeClothe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Product_Clothe">
     <End Role="Clothe" Type="Self.Clothe" Multiplicity="0..1" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
@@ -60,7 +82,12 @@
     <EntitySet Name="Clothe" EntityType="Self.Clothe" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypeClothe" EntityType="Self.TypeClothe" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeMaterial" EntityType="Self.TypeMaterial" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Clothe_TypeClothe" Association="Self.FK_Clothe_TypeClothe">
+      <End Role="TypeClothe" EntitySet="TypeClothe" />
+      <End Role="Clothe" EntitySet="Clothe" />
+    </AssociationSet>
     <AssociationSet Name="FK_Product_Clothe" Association="Self.FK_Product_Clothe">
       <End Role="Clothe" EntitySet="Clothe" />
       <End Role="Product" EntitySet="Product" />

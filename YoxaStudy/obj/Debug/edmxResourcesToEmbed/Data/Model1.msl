@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Clothe">
       <EntityTypeMapping TypeName="YoxaStudyModel.Clothe">
         <MappingFragment StoreEntitySet="Clothe">
+          <ScalarProperty Name="IdTypeClothe" ColumnName="IdTypeClothe" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
@@ -12,6 +13,8 @@
     <EntitySetMapping Name="Product">
       <EntityTypeMapping TypeName="YoxaStudyModel.Product">
         <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="IsDone" ColumnName="IsDone" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="IdClothes" ColumnName="IdClothes" />
           <ScalarProperty Name="IdTypeMaterial" ColumnName="IdTypeMaterial" />
@@ -34,6 +37,14 @@
         <MappingFragment StoreEntitySet="TypeMaterial">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeClothe">
+      <EntityTypeMapping TypeName="YoxaStudyModel.TypeClothe">
+        <MappingFragment StoreEntitySet="TypeClothe">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

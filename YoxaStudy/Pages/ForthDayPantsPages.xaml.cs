@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using YoxaStudy.Data;
 
 namespace YoxaStudy.Pages
 {
@@ -20,9 +21,16 @@ namespace YoxaStudy.Pages
     /// </summary>
     public partial class ForthDayPantsPages : Page
     {
+        public static List<Clothes> productsPants { get; set; }
+        public static List<Clothes> productsShorts { get; set; }
+        public static List<Clothes> productsLeggins { get; set; }
         public ForthDayPantsPages()
         {
             InitializeComponent();
+            productsPants = new List<Clothes>(DbConnection.diplomEntities.Clothes.Where(i => i.ID== 4).ToList());
+            productsShorts = new List<Clothes>(DbConnection.diplomEntities.Clothes.Where(i => i.ID== 5).ToList());
+            productsLeggins = new List<Clothes>(DbConnection.diplomEntities.Clothes.Where(i => i.ID== 6).ToList());
+            this.DataContext = this;
         }
 
         private void firstDayBtn_Click(object sender, RoutedEventArgs e)

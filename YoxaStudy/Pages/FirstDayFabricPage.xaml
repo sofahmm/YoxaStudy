@@ -34,6 +34,8 @@
         <Image Source="/Resurses/user.jpg"
                Grid.RowSpan="3"
                Height="180"
+               Cursor="Hand"
+               MouseDown="Image_MouseDown"
                VerticalAlignment="Top"/>
         <TextBlock Text="Флегматов Енокентий"
                    FontSize="22"
@@ -111,9 +113,10 @@
 
         <StackPanel Orientation="Horizontal"
                     Grid.Column="1"
-                    Grid.ColumnSpan="3"
-                    Grid.Row="2"
-                    Grid.RowSpan="7">
+                    Grid.ColumnSpan="4"
+                    Grid.Row="0"
+                    Grid.RowSpan="10"
+                    Margin="0 20 0 20">
             <Expander
                   Background="LightGray"
                     ExpandDirection="Right"
@@ -124,8 +127,9 @@
                   HorizontalAlignment="Stretch"
                   HorizontalContentAlignment="Center">
                 <Expander.Header>
-                    <TextBlock Text="Футер"
-                           FontSize="20">
+                    <TextBlock Text="Футер - двухнитка"
+                           FontSize="20"
+                               FontWeight="ExtraBold">
                         <TextBlock.LayoutTransform>
                             <RotateTransform
                                      Angle="90" />
@@ -133,48 +137,73 @@
                     </TextBlock>
                 </Expander.Header>
                 <Expander.Content>
-                    <ScrollViewer>
-                        <StackPanel Orientation="Vertical">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resurses/futer.jpg"
-                               Height="140"
-                               Width="140"/>
-                            <Image Source="/Resurses/futerInside.jpg"
-                                       Margin="10 0 10 0"
-                               Height="155"
-                               Width="155"/>
-                        </StackPanel>
-
-                        <TextBlock TextWrapping="Wrap"
-                                       Width="250"
-                                   FontSize="18">
-                                   Это приятная
-                                   тактильно хлопковая ткань,
-                                   мягкая, гладкая с внешней стороны, 
-                                   с изнанки присутствует небольшой начес. 
-                                   Прочная структура ткани получается за счет
-                                   переплетения нитей петлями, из-за этого
-                                   существует подразделение этого материала.
-                        </TextBlock>
-                            <TextBlock Text="Выпускается 3 вида футера:"
-                                       FontSize="18"/>
-                            <TextBlock TextWrapping="Wrap"
-                                    Width="250"
-                                   FontSize="18">
-                            1. Сплетенный из 1 нити.
-                            Нежная и бархатистая изнаночная сторона 
-                            полотна делает ее идеальной для пошива 
-                            детских вещей.
-                        </TextBlock>
-                            <Image Source="/Resurses/futerOneTread.jpg"
+                    <Border BorderBrush="DarkSlateGray"
+                                BorderThickness="3"
+                            Margin="0 0 20 0"
+                                CornerRadius="20">
+                        <StackPanel Orientation="Vertical"
+                                        Margin="0 0 10 0">
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center">
+                                <Image Source="/Resurses/futer.jpg"
                                Height="200"
-                               Width="200"/>
-
-                            <CheckBox Content="Изучено"
-                                      FontSize="20"
-                                      Checked="CheckBox_Checked"/>
+                                   Margin="0 20 0 0"
+                               Width="300"/>
+                                <Image Source="/Resurses/futer.jpg"
+                               Height="200"
+                                   Margin="0 20 0 0"
+                               Width="300"/>
+                            </StackPanel>
+                            <ScrollViewer Height="450"
+                                          Margin="0 0 0 30">
+                                <ListView >
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridView.Columns>
+                                                <GridViewColumn >
+                                                    <StackPanel Orientation="Vertical">
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                           Margin="10 10 10 0"
+                                                               Width="600"
+                                                               FontSize="20"
+                                                                   TextAlignment="Center"
+                                                               Text="Плотный (190-350 г/м2) и мягкий трикотажный материал, с эффектом стрейч (тянется в двух направлениях).Поверхность трикотажа матовая, ровная или в мелкий, слегка просматриваемый рубчик – это зависит от технологии производства."/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                           Margin="10 10 10 0"
+                                                               FontSize="18"
+                                                               Text=" С изнаночной стороны видны мелкие петли или короткий ворс."/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                           Margin="10 10 10 0"
+                                                               FontSize="18"
+                                                               Text="Изделия, которые мы изготавливаем из футера:"/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                           Margin="10 10 10 0"
+                                                               Text="- свитшоты;"/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                           Margin="10 10 10 0"
+                                                               Text="- худи;"/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                           Margin="10 10 10 0"
+                                                               Text="- толстовки."/>
+                                                    </StackPanel>
+                                                </GridViewColumn>
+                                            </GridView.Columns>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </ScrollViewer>
+                           
                         </StackPanel>
-                    </ScrollViewer>
+                    </Border>
                 </Expander.Content>
                
             </Expander>
@@ -186,9 +215,10 @@
                 BorderBrush="Black"
                 BorderThickness="2"
                 Margin=" 0 0 20 0"
-                  HorizontalContentAlignment="Center">
+                HorizontalContentAlignment="Center">
                 <Expander.Header>
-                    <TextBlock Text="Трикотаж"
+                    <TextBlock Text="Футер - трехнитка с начесом"
+                               FontWeight="ExtraBold"
                            FontSize="20">
                         <TextBlock.LayoutTransform>
                             <RotateTransform
@@ -196,13 +226,75 @@
                         </TextBlock.LayoutTransform>
                     </TextBlock>
                 </Expander.Header>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Resurses/fabric.png"
-                       Height="70"
-                       Width="70"/>
-                    <TextBlock Text="wuw"
-                           FontSize="18"/>
-                </StackPanel>
+                <Expander.Content>
+                    <Border BorderBrush="DarkSlateGray"
+                                BorderThickness="3"
+                            Margin="0 0 20 0"
+                                CornerRadius="20">
+                        <StackPanel Orientation="Vertical"
+                                        Margin="0 0 10 0">
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center">
+                                <Image Source="/Resurses/futer.jpg"
+                               Height="200"
+                                   Margin="0 20 0 0"
+                               Width="300"/>
+                                <Image Source="/Resurses/futer.jpg"
+                               Height="200"
+                                   Margin="0 20 0 0"
+                               Width="300"/>
+                            </StackPanel>
+                            <ScrollViewer Height="450"
+                                          Margin="0 0 0 30">
+                                <ListView >
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridView.Columns>
+                                                <GridViewColumn >
+                                                    <StackPanel Orientation="Vertical">
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                           Margin="10 10 10 0"
+                                                               Width="600"
+                                                               FontSize="20"
+                                                                   TextAlignment="Center"
+                                                               Text="Плотный (190-350 г/м2) и мягкий трикотажный материал, с эффектом стрейч (тянется в двух направлениях).Поверхность трикотажа матовая, ровная или в мелкий, слегка просматриваемый рубчик – это зависит от технологии производства."/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                           Margin="10 10 10 0"
+                                                               FontSize="18"
+                                                               Text=" С изнаночной стороны видны мелкие петли или короткий ворс."/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                           Margin="10 10 10 0"
+                                                               FontSize="18"
+                                                               Text="Изделия, которые мы изготавливаем из футера:"/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                           Margin="10 10 10 0"
+                                                               Text="- свитшоты;"/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                           Margin="10 10 10 0"
+                                                               Text="- худи;"/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                           Margin="10 10 10 0"
+                                                               Text="- толстовки."/>
+                                                    </StackPanel>
+                                                </GridViewColumn>
+                                            </GridView.Columns>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </ScrollViewer>
+
+                        </StackPanel>
+                    </Border>
+                </Expander.Content>
             </Expander>
             <Expander
                   Background="LightGray"
@@ -214,21 +306,84 @@
                 Margin=" 0 0 20 0"
                   HorizontalContentAlignment="Center">
                 <Expander.Header>
-                    <TextBlock Text="Трикотаж"
-                           FontSize="20">
+                    <TextBlock Text="Кулирка"
+                           FontSize="20"
+                               FontWeight="ExtraBold">
                         <TextBlock.LayoutTransform>
                             <RotateTransform
                                      Angle="90" />
                         </TextBlock.LayoutTransform>
                     </TextBlock>
                 </Expander.Header>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Resurses/fabric.png"
-                       Height="70"
-                       Width="70"/>
-                    <TextBlock Text="wuw"
-                           FontSize="18"/>
-                </StackPanel>
+                <Expander.Content>
+                    <Border BorderBrush="DarkSlateGray"
+                                BorderThickness="3"
+                            Margin="0 0 20 0"
+                                CornerRadius="20">
+                        <StackPanel Orientation="Vertical"
+                                        Margin="0 0 10 0">
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center">
+                                <Image Source="/Resurses/futer.jpg"
+                               Height="200"
+                                   Margin="0 20 0 0"
+                               Width="300"/>
+                                <Image Source="/Resurses/futer.jpg"
+                               Height="200"
+                                   Margin="0 20 0 0"
+                               Width="300"/>
+                            </StackPanel>
+                            <ScrollViewer Height="450"
+                                          Margin="0 0 0 30">
+                                <ListView >
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridView.Columns>
+                                                <GridViewColumn >
+                                                    <StackPanel Orientation="Vertical">
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                           Margin="10 10 10 0"
+                                                               Width="600"
+                                                               FontSize="20"
+                                                                   TextAlignment="Center"
+                                                               Text="Плотный (190-350 г/м2) и мягкий трикотажный материал, с эффектом стрейч (тянется в двух направлениях).Поверхность трикотажа матовая, ровная или в мелкий, слегка просматриваемый рубчик – это зависит от технологии производства."/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                           Margin="10 10 10 0"
+                                                               FontSize="18"
+                                                               Text=" С изнаночной стороны видны мелкие петли или короткий ворс."/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                           Margin="10 10 10 0"
+                                                               FontSize="18"
+                                                               Text="Изделия, которые мы изготавливаем из футера:"/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                           Margin="10 10 10 0"
+                                                               Text="- свитшоты;"/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                           Margin="10 10 10 0"
+                                                               Text="- худи;"/>
+                                                        <TextBlock Foreground="Black"
+                                                           TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                           Margin="10 10 10 0"
+                                                               Text="- толстовки."/>
+                                                    </StackPanel>
+                                                </GridViewColumn>
+                                            </GridView.Columns>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </ScrollViewer>
+
+                        </StackPanel>
+                    </Border>
+                </Expander.Content>
             </Expander>
             <Expander
                   Background="LightGray"

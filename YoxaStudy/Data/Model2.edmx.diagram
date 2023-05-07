@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dd69df2e470541d18efbfa4e47fd94a4" Name="Diagram1">
+        <EntityTypeShape EntityType="DiplomModel.Clothes" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DiplomModel.Day" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DiplomModel.StageOfTask" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DiplomModel.Stajer" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DiplomModel.StajerTask" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DiplomModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DiplomModel.Task" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DiplomModel.TypeMaterial" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DiplomModel.TypeUser" Width="1.5" PointX="2.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DiplomModel.User" Width="1.5" PointX="5" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="DiplomModel.FK_Task_Clothes" ManuallyRouted="false" />
+        <AssociationConnector Association="DiplomModel.FK_Task_Day" ManuallyRouted="false" />
+        <AssociationConnector Association="DiplomModel.FK_StageOfTask_Task" ManuallyRouted="false" />
+        <AssociationConnector Association="DiplomModel.FK_StajerTask_Stajer" ManuallyRouted="false" />
+        <AssociationConnector Association="DiplomModel.FK_StajerTask_Task" ManuallyRouted="false" />
+        <AssociationConnector Association="DiplomModel.FK_Task_TypeMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="DiplomModel.FK_User_TypeUser" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

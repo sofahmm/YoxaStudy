@@ -8,6 +8,6 @@ namespace YoxaStudy.Data
 {
     public class DbConnection
     {
-        public static YoxaStudyEntities StudyEntities = new YoxaStudyEntities();
+        public static DiplomEntities  diplomEntities = new DiplomEntities();
     }
 }

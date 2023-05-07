@@ -7,6 +7,8 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Product" Relationship="Self.FK_Product_Clothe" FromRole="Clothe" ToRole="Product" />
+    <Property Name="IdTypeClothe" Type="Int32" />
+    <NavigationProperty Name="TypeClothe" Relationship="YoxaStudyModel.FK_Clothe_TypeClothe" FromRole="Clothe" ToRole="TypeClothe" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -17,6 +19,8 @@
     <Property Name="IdTypeMaterial" Type="Int32" />
     <NavigationProperty Name="Clothe" Relationship="Self.FK_Product_Clothe" FromRole="Product" ToRole="Clothe" />
     <NavigationProperty Name="TypeMaterial" Relationship="Self.FK_Product_TypeMaterial" FromRole="Product" ToRole="TypeMaterial" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="IsDone" Type="Boolean" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -73,5 +77,30 @@
       <End Role="TypeMaterial" EntitySet="TypeMaterial" />
       <End Role="Product" EntitySet="Product" />
     </AssociationSet>
+    <EntitySet Name="TypeClothe" EntityType="YoxaStudyModel.TypeClothe" />
+    <AssociationSet Name="FK_Clothe_TypeClothe" Association="YoxaStudyModel.FK_Clothe_TypeClothe">
+      <End Role="TypeClothe" EntitySet="TypeClothe" />
+      <End Role="Clothe" EntitySet="Clothe" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="TypeClothe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Clothe" Relationship="YoxaStudyModel.FK_Clothe_TypeClothe" FromRole="TypeClothe" ToRole="Clothe" />
+  </EntityType>
+  <Association Name="FK_Clothe_TypeClothe">
+    <End Type="YoxaStudyModel.TypeClothe" Role="TypeClothe" Multiplicity="0..1" />
+    <End Type="YoxaStudyModel.Clothe" Role="Clothe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeClothe">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Clothe">
+        <PropertyRef Name="IdTypeClothe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

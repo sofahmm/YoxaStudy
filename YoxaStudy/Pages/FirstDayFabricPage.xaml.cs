@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using YoxaStudy.Data;
 
 namespace YoxaStudy.Pages
 {
@@ -20,9 +21,11 @@ namespace YoxaStudy.Pages
     /// </summary>
     public partial class FirstDayFabricPage : Page
     {
+        public static TypeMaterial typeMaterial { get; set; }
         public FirstDayFabricPage()
         {
             InitializeComponent();
+            this.DataContext = this;
         }
 
         private void firstDayBtn_Click(object sender, RoutedEventArgs e)
@@ -63,6 +66,12 @@ namespace YoxaStudy.Pages
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new CabinetUserPage());
         }
     }
 }
