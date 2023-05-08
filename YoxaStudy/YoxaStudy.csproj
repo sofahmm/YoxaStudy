@@ -266,6 +266,17 @@
       <DependentUpon>Model2.edmx</DependentUpon>
       <LastGenOutput>Model2.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resurses\siruba.jpg" />
+    <Resource Include="Resurses\overlok.png" />
+    <Resource Include="Resurses\jackPetl.jpg" />
+    <Resource Include="Resurses\jackF4.jpg" />
+    <Resource Include="Resurses\good.png" />
+    <Resource Include="Resurses\bifleks.jpg" />
+    <Resource Include="Resurses\bifleks2.jpg" />
+    <Resource Include="Resurses\kulirka.jpg" />
+    <Resource Include="Resurses\kulirka2.jpg" />
+    <Resource Include="Resurses\futer3.jpeg" />
+    <Resource Include="Resurses\futer3_2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

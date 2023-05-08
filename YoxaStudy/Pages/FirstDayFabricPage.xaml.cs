@@ -73,5 +73,13 @@ namespace YoxaStudy.Pages
         {
             NavigationService.Navigate(new CabinetUserPage());
         }
+
+        private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
+        {
+            if (doneCb.IsChecked == true)
+                GoodImg.Visibility = Visibility.Visible;
+            else if (doneCb.IsChecked == false)
+                GoodImg.Visibility = Visibility.Hidden;
+        }
     }
 }

@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:YoxaStudy.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SecondDayMashinePages">
@@ -103,5 +104,1148 @@
                        FontSize="20"
                        TextAlignment="Center"/>
         </Button>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Column="1"
+                    Grid.RowSpan="10"
+                    Grid.ColumnSpan="4"
+                    Margin="0 20 0 20">
+            <Expander Background="LightGray"
+                      ExpandDirection="Right"
+                      BorderBrush="Black"
+                      BorderThickness="2"
+                      Margin="20 0 20 0"
+                      materialDesign:ExpanderAssist.VerticalHeaderPadding="20,35,20,5"
+                      HorizontalAlignment="Stretch"
+                      HorizontalContentAlignment="Center">
+                <Expander.Header>
+                    <TextBlock Text="Jack JK-F4"
+                               FontSize="20"
+                               FontWeight="ExtraBold">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform Angle="90" />
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </Expander.Header>
+                <Expander.Content>
+                    <Border BorderBrush="DarkSlateGray"
+                            BorderThickness="3"
+                            Margin="0 0 20 0"
+                            Width="400"
+                            CornerRadius="20">
+                        <StackPanel Orientation="Vertical"
+                                        Margin="0 0 5 0">
+                            <Image Source="/Resurses/jackF4.jpg"
+                                        Height="200"
+                                        Margin="0 20 5 10"
+                                        Width="320"/>
+                            <Separator  Width="320"
+                                        HorizontalAlignment="Center"
+                                        FontWeight="ExtraBold"/>
+                            <ScrollViewer Height="450">
+                                <ListView Width="400">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridView.Columns>
+                                                <GridViewColumn Width="400">
+                                                    <StackPanel Orientation="Vertical">
+                                                        <TextBlock Foreground="Black"
+                                                                   TextWrapping="Wrap"
+                                                                   Margin="0 5 10 20"
+                                                                   FontSize="20" 
+                                                                   TextAlignment="Center"
+                                                                   Text="Прямострочная швейная машина, ориентированная на выполнение только одной операции – формирование прямой строчки."/>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Класс:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       TextAlignment="Right"
+                                                                       Text="Промышленная швейная машина"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       Width="100"
+                                                                       FontSize="18"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Челнок:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       TextAlignment="Right"
+                                                                       Text="Вертикальный вращающийся"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Width="100"
+                                                                       Text="Автоматическое вдевание нитей:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       TextAlignment="Right"
+                                                                       VerticalAlignment="Center"
+                                                                       Text="Не предусмотрено"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Максимум подъема лапки:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="1.3 см"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="110"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Число доступных швейных операций:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="1"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Длина стежка:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="от 0 до 0.5 см"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="110"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Мощность:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="550 Вт"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Предел скорости шитья:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="205"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="5000 стежков/мин"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Способ продвижения материала:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="175"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Нижняя рейка"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="110"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Смазочная система:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Автоматическая"/>
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </GridViewColumn>
+                                            </GridView.Columns>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </Border>
+                </Expander.Content>
+            </Expander>
+            <Expander Background="LightGray"
+                      ExpandDirection="Right"
+                      BorderBrush="Black"
+                      BorderThickness="2"
+                      Margin="20 0 20 0"
+                      materialDesign:ExpanderAssist.VerticalHeaderPadding="20,35,20,5"
+                      HorizontalAlignment="Stretch"
+                      HorizontalContentAlignment="Center">
+                <Expander.Header>
+                    <TextBlock Text="Jack JK-T783D-Q"
+                               FontSize="20"
+                               FontWeight="ExtraBold">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform Angle="90" />
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </Expander.Header>
+                <Expander.Content>
+                    <Border BorderBrush="DarkSlateGray"
+                            BorderThickness="3"
+                            Margin="0 0 20 0"
+                            Width="400"
+                            CornerRadius="20">
+                        <StackPanel Orientation="Vertical"
+                                        Margin="0 0 5 0">
+                            <Image Source="/Resurses/jackPetl.jpg"
+                                        Height="200"
+                                        Margin="0 20 5 10"
+                                        Width="320"/>
+                            <Separator  Width="320"
+                                        HorizontalAlignment="Center"
+                                        FontWeight="ExtraBold"/>
+                            <ScrollViewer Height="450">
+                                <ListView Width="400">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridView.Columns>
+                                                <GridViewColumn Width="400">
+                                                    <StackPanel Orientation="Vertical">
+                                                        <TextBlock Foreground="Black"
+                                                                   TextWrapping="WrapWithOverflow"
+                                                                   Margin="0 5 10 20"
+                                                                   FontSize="20" 
+                                                                   TextAlignment="Center"
+                                                                   Text="Петельная машина JACK JK-T предназначена для выполнения прямой петли.Машина идет с прямым приводом, автоматическим подъемом лапки и обрезкой нити для любых видов материалов."/>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Класс:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       TextAlignment="Right"
+                                                                       Text="Петельная машина"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       Width="150"
+                                                                       FontSize="18"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Максимальная скорость:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="145"
+                                                                       TextAlignment="Right"
+                                                                       Text="3600 ст/мин"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Width="100"
+                                                                       Text="Подъем лапки:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       TextAlignment="Right"
+                                                                       VerticalAlignment="Center"
+                                                                       Text="до 12 мм"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Длина петли:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="до 33 мм"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="110"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Способ управления:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Механический"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип петли:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Прямая петля"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="110"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип привода:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Встроенный"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип стежка:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Челночный"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип материала:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="170"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Любой"/>
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </GridViewColumn>
+                                            </GridView.Columns>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </Border>
+                </Expander.Content>
+            </Expander>
+            <Expander Background="LightGray"
+                      ExpandDirection="Right"
+                      BorderBrush="Black"
+                      BorderThickness="2"
+                      Margin="20 0 20 0"
+                      materialDesign:ExpanderAssist.VerticalHeaderPadding="20,35,20,5"
+                      HorizontalAlignment="Stretch"
+                      HorizontalContentAlignment="Center">
+                <Expander.Header>
+                    <TextBlock Text="Jack E4S-5-03/233"
+                               FontSize="20"
+                               FontWeight="ExtraBold">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform Angle="90" />
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </Expander.Header>
+                <Expander.Content>
+                    <Border BorderBrush="DarkSlateGray"
+                            BorderThickness="3"
+                            Margin="0 0 20 0"
+                            Width="400"
+                            CornerRadius="20">
+                        <StackPanel Orientation="Vertical"
+                                        Margin="0 0 5 0">
+                            <Image Source="/Resurses/overlok.png"
+                                        Height="200"
+                                        Margin="0 20 5 10"
+                                        Width="320"/>
+                            <Separator  Width="320"
+                                        HorizontalAlignment="Center"
+                                        FontWeight="ExtraBold"/>
+                            <ScrollViewer Height="450">
+                                <ListView Width="400">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridView.Columns>
+                                                <GridViewColumn Width="400">
+                                                    <StackPanel Orientation="Vertical">
+                                                        <TextBlock Foreground="Black"
+                                                                   TextWrapping="WrapWithOverflow"
+                                                                   Margin="0 5 10 20"
+                                                                   FontSize="20" 
+                                                                   TextAlignment="Center"
+                                                                   Text="Оверлок - Jack E4S-5-03/333, это стачивающее-обметочный 5-ти ниточный промышленный оверлок, предназначенный для работы с легкими и средними тканями. Модель оснащена:  встроеным  сервомотором, с плавной регулировкой скорости."/>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Класс:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       TextAlignment="Right"
+                                                                       Text="Оверлок"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       Width="150"
+                                                                       FontSize="18"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Расстояние между иглами:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="145"
+                                                                       TextAlignment="Right"
+                                                                       Text="4.8 мм"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Width="100"
+                                                                       Text="Ширина обметки:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       TextAlignment="Right"
+                                                                       VerticalAlignment="Center"
+                                                                       Text="4 мм"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип стежка:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Цепной"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="110"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип материала:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Средние"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="135"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип продвижения:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="175"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Нижняя рейка"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="110"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип привода:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="200"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Встроенный"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="115"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Платформа:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Плоская"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Число игл/ниток:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="170"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="3/5"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Длина стежка:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="170"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="3.8"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип смазки:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="170"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Автоматическая"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Высота подъема лапки:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="170"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="5 мм"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Позиционер иглы:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="170"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Да"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Скорость шитья:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="170"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="5500 ст/мин"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип иглы:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="170"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="DCx27 14#"/>
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </GridViewColumn>
+                                            </GridView.Columns>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </Border>
+                </Expander.Content>
+            </Expander>
+            <Expander Background="LightGray"
+                      ExpandDirection="Right"
+                      BorderBrush="Black"
+                      BorderThickness="2"
+                      Margin="20 0 20 0"
+                      materialDesign:ExpanderAssist.VerticalHeaderPadding="20,35,20,5"
+                      HorizontalAlignment="Stretch"
+                      HorizontalContentAlignment="Center">
+                <Expander.Header>
+                    <TextBlock Text="SIRUBA VC008-12064P"
+                               FontSize="20"
+                               FontWeight="ExtraBold">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform Angle="90" />
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </Expander.Header>
+                <Expander.Content>
+                    <Border BorderBrush="DarkSlateGray"
+                            BorderThickness="3"
+                            Margin="0 0 20 0"
+                            Width="400"
+                            CornerRadius="20">
+                        <StackPanel Orientation="Vertical"
+                                        Margin="0 0 5 0">
+                            <Image Source="/Resurses/siruba.jpg"
+                                        Height="200"
+                                        Margin="0 20 5 10"
+                                        Width="320"/>
+                            <Separator  Width="320"
+                                        HorizontalAlignment="Center"
+                                        FontWeight="ExtraBold"/>
+                            <ScrollViewer Height="450">
+                                <ListView Width="400">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridView.Columns>
+                                                <GridViewColumn Width="400">
+                                                    <StackPanel Orientation="Vertical">
+                                                        <TextBlock Foreground="Black"
+                                                                   TextWrapping="WrapWithOverflow"
+                                                                   Margin="0 5 10 20"
+                                                                   FontSize="20" 
+                                                                   TextAlignment="Center"
+                                                                   Text="12-ти игольная поясная промышленная швейная машина двухниточного цепного стежка с цилиндрической платформой и задним пулером предназначена для обработки поясов мужского белья, шорт, спортивной одежды и других трикотажных изделий двухниточным цепным стежком с одновременным притачиванием резинки предварительно сшитой в кольцо, с роликом для растяжки изделий."/>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Класс:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       TextAlignment="Right"
+                                                                       Text="Поясная машина"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       Width="150"
+                                                                       FontSize="18"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип стежка:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="145"
+                                                                       TextAlignment="Right"
+                                                                       Text="Цепной"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Width="105"
+                                                                       Text="Тип материала:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="200"
+                                                                       TextAlignment="Right"
+                                                                       VerticalAlignment="Center"
+                                                                       Text="Средние"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Длина стежка:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="от 1,4 до 3,6 мм"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="115"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Платформа:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Цилиндрическая"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="100"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Толщина иглы:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="75-90"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="140"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Применяемые иглы:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="170"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="UOx113GS"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Количество игл:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="175"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="12"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Тип смазки:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="185"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="Автоматическая"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="110"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Высота подъема лапки:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="195"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="12 мм"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="150"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Максимальная скорость шитья:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="160"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="4000 ст/мин"/>
+                                                        </StackPanel>
+                                                        <Separator Width="400"
+                                                                   HorizontalAlignment="Center"/>
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="5 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="130"
+                                                                       FontWeight="Black"
+                                                                       TextAlignment="Left"
+                                                                       Text="Межигольное расстояние:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                       TextWrapping="Wrap"
+                                                                       Margin="10 5 0 0"
+                                                                       FontSize="18"
+                                                                       Width="170"
+                                                                       VerticalAlignment="Center"
+                                                                       TextAlignment="Right"
+                                                                       Text="6,4 мм"/>
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </GridViewColumn>
+                                            </GridView.Columns>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </Border>
+                </Expander.Content>
+            </Expander>
+        </StackPanel>
     </Grid>
 </Page>
