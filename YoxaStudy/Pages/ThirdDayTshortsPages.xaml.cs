@@ -21,15 +21,15 @@ namespace YoxaStudy.Pages
     /// </summary>
     public partial class ThirdDayTshortsPages : Page
     {
-        public static List<Clothes> productsTShorts { get; set; }
-        public static List<Clothes> productsSvitshot { get; set; }
-        public static List<Clothes> productsLongsliv { get; set; }
+        public static List<Data.Task> productsTShorts { get; set; }
+        public static List<Data.Task> productsSvitshot { get; set; }
+        public static List<Data.Task> productsLongsliv { get; set; }
         public ThirdDayTshortsPages()
         {
             InitializeComponent();
-            productsTShorts = new List<Clothes>(DbConnection.diplomEntities.Clothes.Where(i => i.ID == 1).ToList());
-            productsSvitshot = new List<Clothes>(DbConnection.diplomEntities.Clothes.Where(i => i.ID == 2).ToList());
-            productsLongsliv = new List<Clothes>(DbConnection.diplomEntities.Clothes.Where(i => i.ID == 3).ToList());
+            productsTShorts = new List<Data.Task>(DbConnection.diplomEntities.Task.Where(i => i.Clothes.ID == 3).ToList());
+            productsSvitshot = new List<Data.Task>(DbConnection.diplomEntities.Task.Where(i => i.Clothes.ID == 4).ToList());
+            productsLongsliv = new List<Data.Task>(DbConnection.diplomEntities.Task.Where(i => i.Clothes.ID == 7).ToList());
             this.DataContext = this;
         }
 

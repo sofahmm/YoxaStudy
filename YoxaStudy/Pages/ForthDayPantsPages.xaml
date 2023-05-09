@@ -110,7 +110,7 @@
                              Grid.Row="1"
                              Grid.RowSpan="8"
                              Margin="20 0 0 0">
-            <TabControl Width="1010"
+            <TabControl Width="1020"
                         materialDesign:ColorZoneAssist.Mode="PrimaryLight"
                         Style="{StaticResource MaterialDesignFilledTabControl}">
                 <TabItem Header="БРЮКИ" 
@@ -125,7 +125,7 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <Image Source="/Resurses/tshortRegular.png"
+                                                    <Image Source="{Binding ImageClothes}"
                                                        Height="200"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
@@ -134,8 +134,12 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <TextBlock Text="{Binding Clothe.Name}"
-                                                               Foreground="White"/>
+                                                    <TextBlock Text="{Binding Clothes.Name}"
+                                                               Foreground="White"
+                                                               FontSize="20"
+                                                               Width="200"
+                                                               Margin="20 70 0 0"
+                                                               FontWeight="DemiBold"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
@@ -143,7 +147,16 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <TextBlock Text="S, M, L, XL"/>
+                                                    <StackPanel Margin="20 40 0 0">
+                                                        <TextBlock Text="S" 
+                                                                   FontSize="18"/>
+                                                        <TextBlock Text="M"
+                                                                   FontSize="18"/>
+                                                        <TextBlock Text="L"
+                                                                   FontSize="18"/>
+                                                        <TextBlock Text="XL"
+                                                                   FontSize="18"/>
+                                                    </StackPanel>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
@@ -151,7 +164,10 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <TextBlock Text="{Binding TypeMaterial.Name}"/>
+                                                    <TextBlock Text="{Binding TypeMaterial.Name}"
+                                                               TextWrapping="Wrap"
+                                                               FontSize="20"
+                                                               Margin="0 70 0 0"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
@@ -159,7 +175,9 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <CheckBox IsChecked="{Binding IsDone}"/>
+                                                    <TextBlock Text="{Binding MiniDescription}"
+                                                               TextWrapping="Wrap"
+                                                               FontSize="16"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
@@ -180,7 +198,7 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <Image Source="/Resurses/tshortRegular.png"
+                                                    <Image Source="{Binding ImageClothes}"
                                                        Height="200"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
@@ -189,8 +207,12 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <TextBlock Text="{Binding Clothe.Name}"
-                                                               Foreground="White"/>
+                                                    <TextBlock Text="{Binding Clothes.Name}"
+                                                               Foreground="White"
+                                                               FontSize="20"
+                                                               Width="200"
+                                                               Margin="20 70 0 0"
+                                                               FontWeight="DemiBold"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
@@ -198,7 +220,16 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <TextBlock Text="S, M, L, XL"/>
+                                                    <StackPanel Margin="20 40 0 0">
+                                                        <TextBlock Text="S" 
+                                                                   FontSize="18"/>
+                                                        <TextBlock Text="M"
+                                                                   FontSize="18"/>
+                                                        <TextBlock Text="L"
+                                                                   FontSize="18"/>
+                                                        <TextBlock Text="XL"
+                                                                   FontSize="18"/>
+                                                    </StackPanel>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
@@ -206,7 +237,10 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <TextBlock Text="{Binding TypeMaterial.Name}"/>
+                                                    <TextBlock Text="{Binding TypeMaterial.Name}"
+                                                               TextWrapping="Wrap"
+                                                               FontSize="20"
+                                                               Margin="0 70 0 0"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
@@ -214,7 +248,9 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <CheckBox IsChecked="{Binding IsDone}"/>
+                                                    <TextBlock Text="{Binding MiniDescription}"
+                                                               TextWrapping="Wrap"
+                                                               FontSize="16"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
@@ -235,7 +271,7 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <Image Source="/Resurses/tshortRegular.png"
+                                                    <Image Source="{Binding ImageClothes}"
                                                        Height="200"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
@@ -244,8 +280,12 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <TextBlock Text="{Binding Clothe.Name}"
-                                                               Foreground="White"/>
+                                                    <TextBlock Text="{Binding Clothes.Name}"
+                                                               Foreground="White"
+                                                               FontSize="20"
+                                                               Width="200"
+                                                               Margin="20 70 0 0"
+                                                               FontWeight="DemiBold"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
@@ -253,7 +293,16 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <TextBlock Text="S, M, L, XL"/>
+                                                    <StackPanel Margin="20 40 0 0">
+                                                        <TextBlock Text="S" 
+                                                                   FontSize="18"/>
+                                                        <TextBlock Text="M"
+                                                                   FontSize="18"/>
+                                                        <TextBlock Text="L"
+                                                                   FontSize="18"/>
+                                                        <TextBlock Text="XL"
+                                                                   FontSize="18"/>
+                                                    </StackPanel>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
@@ -261,7 +310,10 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <TextBlock Text="{Binding TypeMaterial.Name}"/>
+                                                    <TextBlock Text="{Binding TypeMaterial.Name}"
+                                                               TextWrapping="Wrap"
+                                                               FontSize="20"
+                                                               Margin="0 70 0 0"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
@@ -269,7 +321,9 @@
                                                         Width="200">
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
-                                                    <CheckBox IsChecked="{Binding IsDone}"/>
+                                                    <TextBlock Text="{Binding MiniDescription}"
+                                                               TextWrapping="Wrap"
+                                                               FontSize="16"/>
                                                 </DataTemplate>
                                             </GridViewColumn.CellTemplate>
                                         </GridViewColumn>
