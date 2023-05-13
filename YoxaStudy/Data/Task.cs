@@ -19,6 +19,7 @@ namespace YoxaStudy.Data
         {
             this.StageOfTask = new HashSet<StageOfTask>();
             this.StajerTask = new HashSet<StajerTask>();
+            this.Steps = new HashSet<Steps>();
         }
     
         public int ID { get; set; }
@@ -36,5 +37,7 @@ namespace YoxaStudy.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StajerTask> StajerTask { get; set; }
         public virtual TypeMaterial TypeMaterial { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Steps> Steps { get; set; }
     }
 }

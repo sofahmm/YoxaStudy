@@ -118,7 +118,8 @@
                           Cursor="Hand">
                     <StackPanel>
                         <ListView ItemsSource="{Binding productsTShorts}"
-                                  x:Name="tshortLv">
+                                  x:Name="tshortLv"
+                                  SelectionChanged="tshortLv_SelectionChanged">
                             <ListView.View>
                                 <GridView>
                                     <GridView.Columns>

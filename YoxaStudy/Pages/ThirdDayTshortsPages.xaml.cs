@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using YoxaStudy.Data;
+using YoxaStudy.Windows;
 
 namespace YoxaStudy.Pages
 {
@@ -66,6 +68,13 @@ namespace YoxaStudy.Pages
         private void logOutBtn_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void tshortLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var t = ((sender as ListView).SelectedItem as Data.Task);
+            Steps2Window stepsWindow = new Steps2Window(t);   
+            stepsWindow.Show();
         }
     }
 }

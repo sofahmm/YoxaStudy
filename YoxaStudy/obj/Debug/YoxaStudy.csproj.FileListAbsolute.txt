@@ -56,3 +56,5 @@ C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\bin\Debug\ru\EntityFramework.reso
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\YoxaStudy_Content.g.cs
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\CabinetUserPage.g.cs
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\CabinetUserPage.baml
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Windows\Steps2Window.g.cs
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Windows\Steps2Window.baml

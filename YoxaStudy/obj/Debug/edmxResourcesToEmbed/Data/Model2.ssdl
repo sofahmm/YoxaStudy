@@ -48,6 +48,23 @@
     <Property Name="IdTask" Type="int" />
     <Property Name="IsDone" Type="bit" />
   </EntityType>
+  <EntityType Name="Steps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTask" Type="int" />
+    <Property Name="Image1" Type="varbinary(max)" />
+    <Property Name="Image2" Type="varbinary(max)" />
+    <Property Name="Image3" Type="varbinary(max)" />
+    <Property Name="Image4" Type="varbinary(max)" />
+    <Property Name="Image5" Type="varbinary(max)" />
+    <Property Name="Image6" Type="varbinary(max)" />
+    <Property Name="Image7" Type="varbinary(max)" />
+    <Property Name="Image8" Type="varbinary(max)" />
+    <Property Name="Image9" Type="varbinary(max)" />
+    <Property Name="Image10" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -131,6 +148,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Steps_Task">
+    <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+    <End Role="Steps" Type="Self.Steps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Steps">
+        <PropertyRef Name="IdTask" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Task_Clothes">
     <End Role="Clothes" Type="Self.Clothes" Multiplicity="0..1" />
     <End Role="Task" Type="Self.Task" Multiplicity="*" />
@@ -185,6 +214,7 @@
     <EntitySet Name="StageOfTask" EntityType="Self.StageOfTask" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Stajer" EntityType="Self.Stajer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StajerTask" EntityType="Self.StajerTask" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Steps" EntityType="Self.Steps" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Task" EntityType="Self.Task" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeMaterial" EntityType="Self.TypeMaterial" Schema="dbo" store:Type="Tables" />
@@ -201,6 +231,10 @@
     <AssociationSet Name="FK_StajerTask_Task" Association="Self.FK_StajerTask_Task">
       <End Role="Task" EntitySet="Task" />
       <End Role="StajerTask" EntitySet="StajerTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Steps_Task" Association="Self.FK_Steps_Task">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="Steps" EntitySet="Steps" />
     </AssociationSet>
     <AssociationSet Name="FK_Task_Clothes" Association="Self.FK_Task_Clothes">
       <End Role="Clothes" EntitySet="Clothes" />

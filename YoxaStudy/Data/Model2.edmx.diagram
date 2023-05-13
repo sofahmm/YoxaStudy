@@ -22,6 +22,8 @@
         <AssociationConnector Association="DiplomModel.FK_StajerTask_Task" ManuallyRouted="false" />
         <AssociationConnector Association="DiplomModel.FK_Task_TypeMaterial" ManuallyRouted="false" />
         <AssociationConnector Association="DiplomModel.FK_User_TypeUser" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DiplomModel.Steps" Width="1.5" PointX="5.25" PointY="12.25" />
+        <AssociationConnector Association="DiplomModel.FK_Steps_Task" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

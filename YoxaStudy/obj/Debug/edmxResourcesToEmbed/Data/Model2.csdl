@@ -80,6 +80,7 @@
     <NavigationProperty Name="StageOfTask" Relationship="Self.FK_StageOfTask_Task" FromRole="Task" ToRole="StageOfTask" />
     <NavigationProperty Name="StajerTask" Relationship="Self.FK_StajerTask_Task" FromRole="Task" ToRole="StajerTask" />
     <NavigationProperty Name="TypeMaterial" Relationship="Self.FK_Task_TypeMaterial" FromRole="Task" ToRole="TypeMaterial" />
+    <NavigationProperty Name="Steps" Relationship="DiplomModel.FK_Steps_Task" FromRole="Task" ToRole="Steps" />
   </EntityType>
   <EntityType Name="TypeMaterial">
     <Key>
@@ -232,5 +233,40 @@
       <End Role="TypeUser" EntitySet="TypeUser" />
       <End Role="User" EntitySet="User" />
     </AssociationSet>
+    <EntitySet Name="Steps" EntityType="DiplomModel.Steps" />
+    <AssociationSet Name="FK_Steps_Task" Association="DiplomModel.FK_Steps_Task">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="Steps" EntitySet="Steps" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Steps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTask" Type="Int32" />
+    <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image4" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image5" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image6" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image7" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image8" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image9" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image10" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Task" Relationship="DiplomModel.FK_Steps_Task" FromRole="Steps" ToRole="Task" />
+  </EntityType>
+  <Association Name="FK_Steps_Task">
+    <End Type="DiplomModel.Task" Role="Task" Multiplicity="0..1" />
+    <End Type="DiplomModel.Steps" Role="Steps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Steps">
+        <PropertyRef Name="IdTask" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

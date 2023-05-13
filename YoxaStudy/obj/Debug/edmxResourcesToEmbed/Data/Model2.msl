@@ -106,5 +106,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Steps">
+      <EntityTypeMapping TypeName="DiplomModel.Steps">
+        <MappingFragment StoreEntitySet="Steps">
+          <ScalarProperty Name="Image10" ColumnName="Image10" />
+          <ScalarProperty Name="Image9" ColumnName="Image9" />
+          <ScalarProperty Name="Image8" ColumnName="Image8" />
+          <ScalarProperty Name="Image7" ColumnName="Image7" />
+          <ScalarProperty Name="Image6" ColumnName="Image6" />
+          <ScalarProperty Name="Image5" ColumnName="Image5" />
+          <ScalarProperty Name="Image4" ColumnName="Image4" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="IdTask" ColumnName="IdTask" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
