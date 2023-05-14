@@ -8,27 +8,42 @@
         Title="Steps2Window" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="100"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="testTb"/>
-        <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Visible"
+        <TextBlock x:Name="testTb"
+                   
+                   FontSize="22"/>
+        <CheckBox Grid.Column="3"
+                  x:Name="doneCb"
+                  HorizontalAlignment="Center"
+                  Grid.ColumnSpan="2"
+                  Content="изучено"
+                  FontSize="12"
+                  HorizontalContentAlignment="Center"
+                  Style="{StaticResource MaterialDesignFilterChipCheckBox}"
+                  Cursor="Hand">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <ScrollViewer VerticalScrollBarVisibility="Visible" Background="DarkSlateGray"
                       Grid.ColumnSpan="4"
                       Grid.Row="1"
                       Grid.RowSpan="3">
             <StackPanel>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="500"/>
+                        <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
@@ -40,47 +55,55 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
 
-                    <Image Source="{Binding steps.Image1}"
-                           Height="auto"
-                           x:Name="Image1"
-                           Width="auto"
-                           Grid.Row="0"/>
-                    <Image Source="{Binding steps.Image2}"
-                           Height="auto"
-                           Width="auto"
-                           Grid.Row="1"/>
-                    <Image Source="{Binding steps.Image3}"
-                           Height="auto"
-                           Width="auto"
-                           Grid.Row="2"/>
-                    <Image Source="{Binding steps.Image4}"
-                           Height="auto"
-                           Width="auto"
-                           Grid.Row="3"/>
-                    <Image Source="{Binding steps.Image5}"
-                           Height="auto"
-                           Width="auto"
-                           Grid.Row="4"/>
-                    <Image Source="{Binding steps.Image6}"
-                           Height="auto"
-                           Width="auto"
-                           Grid.Row="5"/>
-                    <Image Source="{Binding steps.Image7}"
-                           Height="auto"
-                           Width="auto"
-                           Grid.Row="6"/>
-                    <Image Source="{Binding steps.Image8}"
-                           Height="auto"
-                           Width="auto"
-                           Grid.Row="7"/>
-                    <Image Source="{Binding steps.Image9}"
-                           Height="auto"
-                           Width="auto"
-                           Grid.Row="8"/>
-                    <Image Source="{Binding steps.Image10}"
-                           Height="auto"
-                           Width="auto"
-                           Grid.Row="9"/>
+                    <ListView x:Name="ImageLv"
+                              Grid.RowSpan="9"
+                              HorizontalAlignment="Center">
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn Header="Image">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Vertical"
+                                                            HorizontalAlignment="Stretch" Margin="30 0 0 0">
+                                                    <Image Source="{Binding Image1}"
+                                                   Height="auto"
+                                                   Width="auto"/>
+                                                    <Image Source="{Binding Image2}"
+                                                           Height="auto"
+                                                           Width="auto"/>
+                                                    <Image Source="{Binding Image3}"
+                                                           Height="auto"
+                                                            Width="auto"/>
+                                                    <Image Source="{Binding Image4}"
+                                                           Height="auto"
+                                                           Width="auto"/>
+                                                    <Image Source="{Binding Image5}"
+                                                           Height="auto"
+                                                           Width="auto"/>
+                                                    <Image Source="{Binding Image6}"
+                                                           Height="auto"
+                                                           Width="auto"/>
+                                                    <Image Source="{Binding Image7}"
+                                                           Height="auto"
+                                                           Width="auto"/>
+                                                    <Image Source="{Binding Image8}"
+                                                           Height="auto"
+                                                           Width="auto"/>
+                                                    <Image Source="{Binding Image9}"
+                                                           Height="auto"
+                                                           Width="auto"/>
+                                                    <Image Source="{Binding Image10}"
+                                                           Height="auto"
+                                                           Width="auto"/>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </Grid>
             </StackPanel>
         </ScrollViewer>

@@ -111,13 +111,15 @@
                        TextAlignment="Center"/>
         </Button>
 
-        <StackPanel Orientation="Horizontal"
-                    Grid.Column="1"
+        <ScrollViewer Grid.Column="1"
                     Grid.ColumnSpan="3"
                     Grid.Row="0"
                     Grid.RowSpan="10"
-                    Margin="0 20 0 20">
-            <Expander Background="LightGray"
+                    Margin="0 20 0 20"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Horizontal">
+                <Expander Background="LightGray"
                       ExpandDirection="Right"
                       BorderBrush="Black"
                       BorderThickness="2"
@@ -125,86 +127,86 @@
                       materialDesign:ExpanderAssist.VerticalHeaderPadding="20,35,20,5"
                       HorizontalAlignment="Stretch"
                       HorizontalContentAlignment="Center">
-                <Expander.Header>
-                    <TextBlock Text="Футер - двухнитка"
+                    <Expander.Header>
+                        <TextBlock Text="Футер - двухнитка"
                                FontSize="20"
                                FontWeight="ExtraBold">
-                        <TextBlock.LayoutTransform>
-                            <RotateTransform Angle="90" />
-                        </TextBlock.LayoutTransform>
-                    </TextBlock>
-                </Expander.Header>
-                <Expander.Content>
-                    <Border BorderBrush="DarkSlateGray"
+                            <TextBlock.LayoutTransform>
+                                <RotateTransform Angle="90" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <Border BorderBrush="DarkSlateGray"
                                 BorderThickness="3"
                             Margin="0 0 20 0"
                             Width="400"
                                 CornerRadius="20">
-                        <StackPanel Orientation="Vertical"
+                            <StackPanel Orientation="Vertical"
                                         Margin="0 0 10 0">
-                            <Image Source="/Resurses/futer.jpg"
+                                <Image Source="/Resurses/futer.jpg"
                                         Height="200"
                                         Margin="0 20 5 10"
                                         Width="300"/>
-                            <Separator  Width="300"
+                                <Separator  Width="300"
                                         HorizontalAlignment="Center"
                                         
                                         FontWeight="ExtraBold"/>
-                            <ScrollViewer Height="450">
-                                <ListView Width="350">
-                                    <ListView.View>
-                                        <GridView>
-                                            <GridView.Columns>
-                                                <GridViewColumn Width="370">
-                                                    <StackPanel Orientation="Vertical">
-                                                        <TextBlock Foreground="Black"
+                                <ScrollViewer Height="450">
+                                    <ListView Width="350">
+                                        <ListView.View>
+                                            <GridView>
+                                                <GridView.Columns>
+                                                    <GridViewColumn Width="370">
+                                                        <StackPanel Orientation="Vertical">
+                                                            <TextBlock Foreground="Black"
                                                                    TextWrapping="Wrap"
                                                                    Margin="5 10 0 0"
                                                                    FontSize="20"
                                                                    TextAlignment="Center"
                                                                    Text="Плотный и мягкий трикотажный материал, с эффектом стрейч (тянется в двух направлениях).Поверхность трикотажа матовая, ровная или в мелкий, слегка просматриваемый рубчик – это зависит от технологии производства."/>
-                                                        <TextBlock Foreground="Black"
+                                                            <TextBlock Foreground="Black"
                                                                    TextWrapping="Wrap"
                                                                    Margin="10 10 10 0"
                                                                    FontSize="18"
                                                                    TextAlignment="Center"
                                                                    Text=" С изнаночной стороны видны мелкие петли или короткий ворс."/>
-                                                        <Separator FontWeight="Bold"
+                                                            <Separator FontWeight="Bold"
                                                                    HorizontalContentAlignment="Center"/>
-                                                        <TextBlock Foreground="Black"
+                                                            <TextBlock Foreground="Black"
                                                                    TextWrapping="Wrap"
                                                                    Margin="10 10 10 0"
                                                                    FontSize="18"
                                                                    Text="Изделия, которые мы изготавливаем из футера:"/>
-                                                        <TextBlock Foreground="Black"
+                                                            <TextBlock Foreground="Black"
                                                                    TextWrapping="Wrap"
                                                                    FontSize="18"
                                                                    Margin="10 10 10 0"
                                                                    Text="- свитшоты;"/>
-                                                        <TextBlock Foreground="Black"
+                                                            <TextBlock Foreground="Black"
                                                                    TextWrapping="Wrap"
                                                                    FontSize="18"
                                                                    Margin="10 10 10 0"
                                                                    Text="- джоггеры;"/>
-                                                        <TextBlock Foreground="Black"
+                                                            <TextBlock Foreground="Black"
                                                                    TextWrapping="Wrap"
                                                                    FontSize="18"
                                                                    Margin="10 10 10 0"
                                                                    Text="- палаццо."/>
-                                                    </StackPanel>
-                                                </GridViewColumn>
-                                            </GridView.Columns>
-                                        </GridView>
-                                    </ListView.View>
-                                </ListView>
-                            </ScrollViewer>
+                                                        </StackPanel>
+                                                    </GridViewColumn>
+                                                </GridView.Columns>
+                                            </GridView>
+                                        </ListView.View>
+                                    </ListView>
+                                </ScrollViewer>
 
-                        </StackPanel>
-                    </Border>
-                </Expander.Content>
+                            </StackPanel>
+                        </Border>
+                    </Expander.Content>
 
-            </Expander>
-            <Expander Background="LightGray"
+                </Expander>
+                <Expander Background="LightGray"
                       ExpandDirection="Right"
                       materialDesign:ExpanderAssist.VerticalHeaderPadding="20,35,20,5"
                       HorizontalAlignment="Stretch"
@@ -212,78 +214,78 @@
                       BorderThickness="2"
                       Margin=" 0 0 20 0"
                       HorizontalContentAlignment="Center">
-                <Expander.Header>
-                    <TextBlock Text="Футер - трехнитка с начесом"
+                    <Expander.Header>
+                        <TextBlock Text="Футер - трехнитка с начесом"
                                FontWeight="ExtraBold"
                                FontSize="20">
-                        <TextBlock.LayoutTransform>
-                            <RotateTransform Angle="90" />
-                        </TextBlock.LayoutTransform>
-                    </TextBlock>
-                </Expander.Header>
-                <Expander.Content>
-                    <Border BorderBrush="DarkSlateGray"
+                            <TextBlock.LayoutTransform>
+                                <RotateTransform Angle="90" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <Border BorderBrush="DarkSlateGray"
                             BorderThickness="3"
                             Margin="0 0 20 0"
                             Width="400"
                             CornerRadius="20">
-                        <StackPanel Orientation="Vertical"
+                            <StackPanel Orientation="Vertical"
                                     Margin="0 0 10 0">
-                            <Image Source="/Resurses/futer3.jpeg"
+                                <Image Source="/Resurses/futer3.jpeg"
                                        Height="200"
                                        HorizontalAlignment="Center"
                                        Margin="0 10 5 10"
                                        Width="300"/>
-                            <Separator FontWeight="Bold"
+                                <Separator FontWeight="Bold"
                                        HorizontalContentAlignment="Center"/>
-                            <ScrollViewer Height="450"
+                                <ScrollViewer Height="450"
                                           Margin="0 0 0 30">
-                                <ListView Width="370">
-                                    <ListView.View>
-                                        <GridView>
-                                            <GridView.Columns>
-                                                <GridViewColumn Width="370">
-                                                    <StackPanel Orientation="Vertical">
-                                                        <TextBlock Foreground="Black"
+                                    <ListView Width="370">
+                                        <ListView.View>
+                                            <GridView>
+                                                <GridView.Columns>
+                                                    <GridViewColumn Width="370">
+                                                        <StackPanel Orientation="Vertical">
+                                                            <TextBlock Foreground="Black"
                                                                    TextWrapping="Wrap"
                                                                    Margin="10 10 10 0"
                                                                    FontSize="20"
                                                                    TextAlignment="Center"
                                                                    Text="Футер трехнитка – самый толстый, плотный и теплый вид трикотажа в своей группе. Лицевая сторона обычно гладкая, напоминающая кулирную гладь, изнаночная – петлеобразная (в виде махры) или ворсистая."/>
-                                                        <Separator FontWeight="Bold"
+                                                            <Separator FontWeight="Bold"
                                                                    HorizontalContentAlignment="Center"/>
-                                                        <TextBlock Foreground="Black"
+                                                            <TextBlock Foreground="Black"
                                                                    TextWrapping="Wrap"
                                                                    Margin="10 10 10 0"
                                                                    FontSize="18"
                                                                    Text="Изделия, которые мы изготавливаем из футера 3х никти:"/>
-                                                        <TextBlock Foreground="Black"
+                                                            <TextBlock Foreground="Black"
                                                                    TextWrapping="Wrap"
                                                                    FontSize="18"
                                                                    Margin="10 10 10 0"
                                                                    Text="- худи;"/>
-                                                        <TextBlock Foreground="Black"
+                                                            <TextBlock Foreground="Black"
                                                                    TextWrapping="Wrap"
                                                                    FontSize="18"
                                                                    Margin="10 10 10 0"
                                                                    Text="- джоггеры;"/>
-                                                        <TextBlock Foreground="Black"
+                                                            <TextBlock Foreground="Black"
                                                                    TextWrapping="Wrap"
                                                                    FontSize="18"
                                                                    Margin="10 10 10 0"
                                                                    Text="- мужские брюки."/>
-                                                    </StackPanel>
-                                                </GridViewColumn>
-                                            </GridView.Columns>
-                                        </GridView>
-                                    </ListView.View>
-                                </ListView>
-                            </ScrollViewer>
-                        </StackPanel>
-                    </Border>
-                </Expander.Content>
-            </Expander>
-            <Expander Background="LightGray"
+                                                        </StackPanel>
+                                                    </GridViewColumn>
+                                                </GridView.Columns>
+                                            </GridView>
+                                        </ListView.View>
+                                    </ListView>
+                                </ScrollViewer>
+                            </StackPanel>
+                        </Border>
+                    </Expander.Content>
+                </Expander>
+                <Expander Background="LightGray"
                       ExpandDirection="Right"
                       materialDesign:ExpanderAssist.VerticalHeaderPadding="20,35,20,5"
                       HorizontalAlignment="Stretch"
@@ -291,32 +293,117 @@
                       BorderThickness="2"
                       Margin=" 0 0 20 0"
                       HorizontalContentAlignment="Center">
-                <Expander.Header>
-                    <TextBlock Text="Кулирка"
+                    <Expander.Header>
+                        <TextBlock Text="Кулирка"
                                FontSize="20"
                                FontWeight="ExtraBold">
-                        <TextBlock.LayoutTransform>
-                            <RotateTransform Angle="90" />
-                        </TextBlock.LayoutTransform>
-                    </TextBlock>
-                </Expander.Header>
-                <Expander.Content>
-                    <Border BorderBrush="DarkSlateGray"
+                            <TextBlock.LayoutTransform>
+                                <RotateTransform Angle="90" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <Border BorderBrush="DarkSlateGray"
                             BorderThickness="3"
                             Margin="0 0 20 0"
                             CornerRadius="20"
                             Width="400">
-                        <StackPanel Orientation="Vertical"
+                            <StackPanel Orientation="Vertical"
                                     Margin="0 0 10 0">
-                            <Image Source="/Resurses/kulirka.jpg"
+                                <Image Source="/Resurses/kulirka.jpg"
                                        Height="200"
                                        HorizontalAlignment="Center"
                                        Margin="0 20 5 10"
                                        Width="300"/>
-                            <Separator FontWeight="Bold"
+                                <Separator FontWeight="Bold"
                                        HorizontalContentAlignment="Center"/>
-                            <ScrollViewer Height="450"
+                                <ScrollViewer Height="450"
                                           Margin="0 0 0 30">
+                                    <ListView Width="370">
+                                        <ListView.View>
+                                            <GridView>
+                                                <GridView.Columns>
+                                                    <GridViewColumn Width="370">
+                                                        <StackPanel Orientation="Vertical">
+                                                            <TextBlock Foreground="Black"
+                                                                   TextWrapping="Wrap"
+                                                                   Margin="10 10 10 0"
+                                                                   FontSize="20"
+                                                                   TextAlignment="Center"
+                                                                   Text="Кулирка — вид простейшей трикотажной ткани. В основе лежит хлопковое волокно с небольшим добавлением искусственных материалов."/>
+                                                            <TextBlock Foreground="Black"
+                                                                   TextWrapping="Wrap"
+                                                                   Margin="10 10 10 0"
+                                                                   FontSize="18"
+                                                                   TextAlignment="Center"
+                                                                   Text="Поверхность мягкая, эластичная, легкая на ощупь. Ткань слегка тянется."/>
+                                                            <Separator FontWeight="Bold"
+                                                                   HorizontalContentAlignment="Center"/>
+                                                            <TextBlock Foreground="Black"
+                                                                   TextWrapping="Wrap"
+                                                                   Margin="10 10 10 0"
+                                                                   FontSize="18"
+                                                                   Text="Изделия, которые мы изготавливаем из кулирки:"/>
+                                                            <TextBlock Foreground="Black"
+                                                                   TextWrapping="Wrap"
+                                                                   FontSize="18"
+                                                                   Margin="10 10 10 0"
+                                                                   Text="- лонгсливы;"/>
+                                                            <TextBlock Foreground="Black"
+                                                                   TextWrapping="Wrap"
+                                                                   FontSize="18"
+                                                                   Margin="10 10 10 0"
+                                                                   Text="- футболки;"/>
+                                                            <TextBlock Foreground="Black"
+                                                                   TextWrapping="Wrap"
+                                                                   FontSize="18"
+                                                                   Margin="10 10 10 0"
+                                                                   Text="- шорты."/>
+                                                        </StackPanel>
+                                                    </GridViewColumn>
+                                                </GridView.Columns>
+                                            </GridView>
+                                        </ListView.View>
+                                    </ListView>
+                                </ScrollViewer>
+
+                            </StackPanel>
+                        </Border>
+                    </Expander.Content>
+                </Expander>
+                <Expander Background="LightGray"
+                      ExpandDirection="Right"
+                      materialDesign:ExpanderAssist.VerticalHeaderPadding="20,35,20,5"
+                      HorizontalAlignment="Stretch"
+                      BorderBrush="Black"
+                      BorderThickness="2"
+                      Margin=" 0 0 20 0"
+                      HorizontalContentAlignment="Center">
+                    <Expander.Header>
+                        <TextBlock Text="Бифлекс"
+                               FontSize="20"
+                               FontWeight="ExtraBold">
+                            <TextBlock.LayoutTransform>
+                                <RotateTransform Angle="90" />
+                            </TextBlock.LayoutTransform>
+                        </TextBlock>
+                    </Expander.Header>
+                    <Border BorderBrush="DarkSlateGray"
+                        BorderThickness="3"
+                        Margin="0 0 20 0"
+                        Width="400"
+                        CornerRadius="20">
+                        <StackPanel Orientation="Vertical"
+                                Margin="0 0 10 0">
+                            <Image Source="/Resurses/bifleks.jpg"
+                                   HorizontalAlignment="Center"
+                                   Height="200"
+                                   Margin="0 20 5 10"
+                                   Width="300"/>
+                            <Separator FontWeight="Bold"
+                                   HorizontalContentAlignment="Center"/>
+                            <ScrollViewer Height="450"
+                                      Margin="0 0 0 30">
                                 <ListView Width="370">
                                     <ListView.View>
                                         <GridView>
@@ -328,35 +415,36 @@
                                                                    Margin="10 10 10 0"
                                                                    FontSize="20"
                                                                    TextAlignment="Center"
-                                                                   Text="Кулирка — вид простейшей трикотажной ткани. В основе лежит хлопковое волокно с небольшим добавлением искусственных материалов."/>
+                                                                   Text="Приятная на ощупь материя плотно облегает фигуру и не требует применения утюга. При растяжении продукция увеличивается до 300 %."/>
                                                         <TextBlock Foreground="Black"
-                                                                   TextWrapping="Wrap"
-                                                                   Margin="10 10 10 0"
-                                                                   FontSize="18"
-                                                                   TextAlignment="Center"
-                                                                   Text="Поверхность мягкая, эластичная, легкая на ощупь. Ткань слегка тянется."/>
+                                                               TextWrapping="Wrap"
+                                                               Margin="10 10 10 0"
+                                                               FontSize="18"
+                                                               TextAlignment="Center"
+                                                               Text="Текстура ткани также может разниться в зависимости от состава. Бифлекс бывает блестящим, глянцевым и матовым. Благодаря добавлению в состав ткани большого количества люрекса возможен мерцающий эффект. "/>
                                                         <Separator FontWeight="Bold"
-                                                                   HorizontalContentAlignment="Center"/>                                                                                                                           
+                                                               HorizontalContentAlignment="Center"/>
                                                         <TextBlock Foreground="Black"
-                                                                   TextWrapping="Wrap"
-                                                                   Margin="10 10 10 0"
-                                                                   FontSize="18"
-                                                                   Text="Изделия, которые мы изготавливаем из кулирки:"/>
+                                                               TextAlignment="Center"
+                                                               TextWrapping="Wrap"
+                                                               Margin="10 10 10 0"
+                                                               FontSize="18"
+                                                               Text="Изделия, которые мы изготавливаем из футера:"/>
                                                         <TextBlock Foreground="Black"
-                                                                   TextWrapping="Wrap"
-                                                                   FontSize="18"
-                                                                   Margin="10 10 10 0"
-                                                                   Text="- лонгсливы;"/>
+                                                               TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                               Margin="10 10 10 0"
+                                                               Text="- леггинсы;"/>
                                                         <TextBlock Foreground="Black"
-                                                                   TextWrapping="Wrap"
-                                                                   FontSize="18"
-                                                                   Margin="10 10 10 0"
-                                                                   Text="- футболки;"/>
+                                                               TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                               Margin="10 10 10 0"
+                                                               Text="- футболки;"/>
                                                         <TextBlock Foreground="Black"
-                                                                   TextWrapping="Wrap"
-                                                                   FontSize="18"
-                                                                   Margin="10 10 10 0"
-                                                                   Text="- шорты."/>
+                                                               TextWrapping="Wrap"
+                                                               FontSize="18"
+                                                               Margin="10 10 10 0"
+                                                               Text="- велосипедки."/>
                                                     </StackPanel>
                                                 </GridViewColumn>
                                             </GridView.Columns>
@@ -364,96 +452,12 @@
                                     </ListView.View>
                                 </ListView>
                             </ScrollViewer>
-
                         </StackPanel>
                     </Border>
-                </Expander.Content>
-            </Expander>
-            <Expander Background="LightGray"
-                      ExpandDirection="Right"
-                      materialDesign:ExpanderAssist.VerticalHeaderPadding="20,35,20,5"
-                      HorizontalAlignment="Stretch"
-                      BorderBrush="Black"
-                      BorderThickness="2"
-                      Margin=" 0 0 20 0"
-                      HorizontalContentAlignment="Center">
-                <Expander.Header>
-                    <TextBlock Text="Бифлекс"
-                               FontSize="20"
-                               FontWeight="ExtraBold">
-                        <TextBlock.LayoutTransform>
-                            <RotateTransform Angle="90" />
-                        </TextBlock.LayoutTransform>
-                    </TextBlock>
-                </Expander.Header>
-                <Border BorderBrush="DarkSlateGray"
-                        BorderThickness="3"
-                        Margin="0 0 20 0"
-                        Width="400"
-                        CornerRadius="20">
-                    <StackPanel Orientation="Vertical"
-                                Margin="0 0 10 0">
-                        <Image Source="/Resurses/bifleks.jpg"
-                                   HorizontalAlignment="Center"
-                                   Height="200"
-                                   Margin="0 20 5 10"
-                                   Width="300"/>
-                        <Separator FontWeight="Bold"
-                                   HorizontalContentAlignment="Center"/>
-                        <ScrollViewer Height="450"
-                                      Margin="0 0 0 30">
-                            <ListView Width="370">
-                                <ListView.View>
-                                    <GridView>
-                                        <GridView.Columns>
-                                            <GridViewColumn Width="370">
-                                                <StackPanel Orientation="Vertical">
-                                                    <TextBlock Foreground="Black"
-                                                                   TextWrapping="Wrap"
-                                                                   Margin="10 10 10 0"
-                                                                   FontSize="20"
-                                                                   TextAlignment="Center"
-                                                                   Text="Приятная на ощупь материя плотно облегает фигуру и не требует применения утюга. При растяжении продукция увеличивается до 300 %."/>
-                                                    <TextBlock Foreground="Black"
-                                                               TextWrapping="Wrap"
-                                                               Margin="10 10 10 0"
-                                                               FontSize="18"
-                                                               TextAlignment="Center"
-                                                               Text="Текстура ткани также может разниться в зависимости от состава. Бифлекс бывает блестящим, глянцевым и матовым. Благодаря добавлению в состав ткани большого количества люрекса возможен мерцающий эффект. "/>
-                                                    <Separator FontWeight="Bold"
-                                                               HorizontalContentAlignment="Center"/>
-                                                    <TextBlock Foreground="Black"
-                                                               TextAlignment="Center"
-                                                               TextWrapping="Wrap"
-                                                               Margin="10 10 10 0"
-                                                               FontSize="18"
-                                                               Text="Изделия, которые мы изготавливаем из футера:"/>
-                                                    <TextBlock Foreground="Black"
-                                                               TextWrapping="Wrap"
-                                                               FontSize="18"
-                                                               Margin="10 10 10 0"
-                                                               Text="- леггинсы;"/>
-                                                    <TextBlock Foreground="Black"
-                                                               TextWrapping="Wrap"
-                                                               FontSize="18"
-                                                               Margin="10 10 10 0"
-                                                               Text="- футболки;"/>
-                                                    <TextBlock Foreground="Black"
-                                                               TextWrapping="Wrap"
-                                                               FontSize="18"
-                                                               Margin="10 10 10 0"
-                                                               Text="- велосипедки."/>
-                                                </StackPanel>
-                                            </GridViewColumn>
-                                        </GridView.Columns>
-                                    </GridView>
-                                </ListView.View>
-                            </ListView>
-                        </ScrollViewer>
-                    </StackPanel>
-                </Border>
-            </Expander>
-        </StackPanel>
+                </Expander>
+            </StackPanel>
+        </ScrollViewer>
+        
 
         <TextBlock Text="Изучение данного раздела необходимо для ознакомления стажера с тканями, которые мы используем в производстве."
                    TextAlignment="Center"

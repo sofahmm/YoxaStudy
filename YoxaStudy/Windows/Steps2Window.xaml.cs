@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,16 +26,18 @@ namespace YoxaStudy.Windows
         public Steps2Window(Data.Task step)
         {
             InitializeComponent();
-            steps = new List<Steps>(DbConnection.diplomEntities.Steps.Where(i => i.IdTask == step.ID).ToList());
+            steps = new List<Steps>(DbConnection.diplomEntities.Steps.ToList());
             //Image1.Source = steps;
             //steps.IdTask = step;
-            //foreach(Steps i in s)
-            //{
-            //   if(step.ID == i.IdTask)
-            //    {
-            //        testTb.Text = i.IdTask.ToString();
-            //    }
-            //}
+            foreach (Steps i in steps)
+            {
+                if (step.ID == i.IdTask)
+                {
+                    testTb.Text = i.IdTask.ToString();
+                    ImageLv.ItemsSource = steps;
+                    
+                }
+            }
             this.DataContext = this;
         }
     }
