@@ -5,107 +5,258 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YoxaStudy.Windows"
         mc:Ignorable="d"
-        Title="Steps2Window" Height="450" Width="800">
+        Title="Steps" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="testTb"
-                   
-                   FontSize="22"/>
-        <CheckBox Grid.Column="3"
+        <ListView x:Name="StepsTransLv"
+                  Grid.ColumnSpan="3"
+                  Grid.RowSpan="6"
+                  HorizontalAlignment="Left"
+                  HorizontalContentAlignment="Center"
+                  ItemsSource="{Binding stepTasks}">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="1"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical"
+                                HorizontalAlignment="Center">
+                        <StackPanel Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Step1}"
+                                       FontWeight="Bold"
+                                       FontSize="24"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                            <Image Source="{Binding Image1}"
+                                   Height="500"
+                                   Width="550"/>
+                            <TextBlock Text="{Binding Description1}"
+                                       TextWrapping="Wrap"
+                                       FontSize="22"
+                                       Width="700"
+                                       TextAlignment="Center"
+                                       Foreground="Black"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Step2}"
+                                       FontWeight="Bold"
+                                       FontSize="24"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                            <Image Source="{Binding Image2}"
+                                   Height="500"
+                                   Width="550"/>
+                            <TextBlock Text="{Binding Description2}"
+                                       TextWrapping="Wrap"
+                                       FontSize="22"
+                                       Width="670"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Step3}"
+                                       FontWeight="Bold"
+                                       FontSize="24"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                            <Image Source="{Binding Image3}"
+                                   Height="500"
+                                   Width="550"/>
+                            <TextBlock Text="{Binding Description3}"
+                                       TextWrapping="Wrap"
+                                       FontSize="22"
+                                       Width="670"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Step4}"
+                                       FontWeight="Bold"
+                                       FontSize="24"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                            <Image Source="{Binding Image4}"
+                                   Height="500"
+                                   Width="550"/>
+                            <TextBlock Text="{Binding Description4}"
+                                       TextWrapping="Wrap"
+                                       FontSize="22"
+                                       Width="670"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Step5}"
+                                       FontWeight="Bold"
+                                       FontSize="24"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                            <Image Source="{Binding Image5}"
+                                   Height="500"
+                                   Width="550"/>
+                            <TextBlock Text="{Binding Description5}"
+                                       TextWrapping="Wrap"
+                                       FontSize="22"
+                                       Foreground="Black"
+                                       Width="670"
+                                       TextAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Step6}"
+                                       FontWeight="Bold"
+                                       FontSize="24"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                            <Image Source="{Binding Image6}"
+                                   Height="500"
+                                   Width="550"/>
+                            <TextBlock Text="{Binding Description6}"
+                                       TextWrapping="Wrap"
+                                       FontSize="22"
+                                       Width="670"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Step7}"
+                                       FontWeight="Bold"
+                                       FontSize="24"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                            <Image Source="{Binding Image7}"
+                                   Height="500"
+                                   Width="550"/>
+                            <TextBlock Text="{Binding Description7}"
+                                       TextWrapping="Wrap"
+                                       FontSize="22"
+                                       Width="670"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Step8}"
+                                       FontWeight="Bold"
+                                       FontSize="24"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                            <Image Source="{Binding Image8}"
+                                   Height="500"
+                                   Width="550"/>
+                            <TextBlock Text="{Binding Description8}"
+                                       TextWrapping="Wrap"
+                                       FontSize="22"
+                                       Width="670"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Step9}"
+                                       FontWeight="Bold"
+                                       FontSize="24"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                            <Image Source="{Binding Image9}"
+                                   Height="500"
+                                   Width="550"/>
+                            <TextBlock Text="{Binding Description9}"
+                                       TextWrapping="Wrap"
+                                       FontSize="22"
+                                       Width="670"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Step10}"
+                                       FontWeight="Bold"
+                                       FontSize="24"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                            <Image Source="{Binding Image10}"
+                                   Height="500"
+                                   Width="550"/>
+                            <TextBlock Text="{Binding Description10}"
+                                       TextWrapping="Wrap"
+                                       FontSize="22"
+                                       Width="670"
+                                       Foreground="Black"
+                                       TextAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <TextBlock Text="Какое изделие у вас должно получиться:"
+                   Grid.Column="3"
+                   Grid.ColumnSpan="3"
+                   FontSize="24"
+                   TextWrapping="Wrap"
+                   TextAlignment="Center"
+                   FontWeight="DemiBold"/>
+        <Image Source="{Binding step1.ImageClothes}"
+               Width="300"
+               Height="200"
+               Grid.Column="3"
+               Grid.ColumnSpan="3"
+               Grid.Row="1"
+               Grid.RowSpan="3"/>
+        <TextBlock Grid.Column="3"
+                   Grid.ColumnSpan="3"
+                   Grid.Row="4"
+                   TextWrapping="Wrap"
+                   FontSize="18"
+                   TextAlignment="Center"
+                   x:Name="MiniDescTb"/>
+        <CheckBox Grid.Column="4"
                   x:Name="doneCb"
                   HorizontalAlignment="Center"
-                  Grid.ColumnSpan="2"
-                  Content="изучено"
+                  Content=" изучено"
                   FontSize="12"
                   HorizontalContentAlignment="Center"
                   Style="{StaticResource MaterialDesignFilterChipCheckBox}"
-                  Cursor="Hand">
+                  Grid.Row="5" Cursor="Hand"
+                  Checked="doneCb_Checked_1">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <ScrollViewer VerticalScrollBarVisibility="Visible" Background="DarkSlateGray"
-                      Grid.ColumnSpan="4"
-                      Grid.Row="1"
-                      Grid.RowSpan="3">
-            <StackPanel>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-
-                    <ListView x:Name="ImageLv"
-                              Grid.RowSpan="9"
-                              HorizontalAlignment="Center">
-                        <ListView.View>
-                            <GridView>
-                                <GridView.Columns>
-                                    <GridViewColumn Header="Image">
-                                        <GridViewColumn.CellTemplate>
-                                            <DataTemplate>
-                                                <StackPanel Orientation="Vertical"
-                                                            HorizontalAlignment="Stretch" Margin="30 0 0 0">
-                                                    <Image Source="{Binding Image1}"
-                                                   Height="auto"
-                                                   Width="auto"/>
-                                                    <Image Source="{Binding Image2}"
-                                                           Height="auto"
-                                                           Width="auto"/>
-                                                    <Image Source="{Binding Image3}"
-                                                           Height="auto"
-                                                            Width="auto"/>
-                                                    <Image Source="{Binding Image4}"
-                                                           Height="auto"
-                                                           Width="auto"/>
-                                                    <Image Source="{Binding Image5}"
-                                                           Height="auto"
-                                                           Width="auto"/>
-                                                    <Image Source="{Binding Image6}"
-                                                           Height="auto"
-                                                           Width="auto"/>
-                                                    <Image Source="{Binding Image7}"
-                                                           Height="auto"
-                                                           Width="auto"/>
-                                                    <Image Source="{Binding Image8}"
-                                                           Height="auto"
-                                                           Width="auto"/>
-                                                    <Image Source="{Binding Image9}"
-                                                           Height="auto"
-                                                           Width="auto"/>
-                                                    <Image Source="{Binding Image10}"
-                                                           Height="auto"
-                                                           Width="auto"/>
-                                                </StackPanel>
-                                            </DataTemplate>
-                                        </GridViewColumn.CellTemplate>
-                                    </GridViewColumn>
-                                </GridView.Columns>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
-                </Grid>
-            </StackPanel>
-        </ScrollViewer>
     </Grid>
 </Window>

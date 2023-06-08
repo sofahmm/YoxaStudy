@@ -18,6 +18,7 @@ namespace YoxaStudy.Data
         public Stajer()
         {
             this.StajerTask = new HashSet<StajerTask>();
+            this.StajerDay = new HashSet<StajerDay>();
         }
     
         public int ID { get; set; }
@@ -26,8 +27,14 @@ namespace YoxaStudy.Data
         public string Patronymic { get; set; }
         public Nullable<System.DateTime> Birthdate { get; set; }
         public byte[] Image { get; set; }
+        public Nullable<System.DateTime> DateOfRegistr { get; set; }
+        public Nullable<bool> IsVisible { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StajerTask> StajerTask { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StajerDay> StajerDay { get; set; }
     }
 }

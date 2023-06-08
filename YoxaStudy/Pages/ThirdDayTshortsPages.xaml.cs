@@ -23,26 +23,27 @@ namespace YoxaStudy.Pages
     /// </summary>
     public partial class ThirdDayTshortsPages : Page
     {
-        public static List<Data.Task> productsTShorts { get; set; }
-        public static List<Data.Task> productsSvitshot { get; set; }
-        public static List<Data.Task> productsLongsliv { get; set; }
-        public ThirdDayTshortsPages()
+        public static List<Data.Task> products { get; set; }
+        public static Stajer stjr { get; set; }
+        public static Stajer stajer1 = new Stajer();
+        public ThirdDayTshortsPages(Stajer stajer)
         {
             InitializeComponent();
-            productsTShorts = new List<Data.Task>(DbConnection.diplomEntities.Task.Where(i => i.Clothes.ID == 3).ToList());
-            productsSvitshot = new List<Data.Task>(DbConnection.diplomEntities.Task.Where(i => i.Clothes.ID == 4).ToList());
-            productsLongsliv = new List<Data.Task>(DbConnection.diplomEntities.Task.Where(i => i.Clothes.ID == 7).ToList());
+            products = new List<Data.Task>(DbConnection.diplomEntities.Task.Where(i => i.IdDay == 3).ToList());
+            stajer1 = stajer;
+            stjr = stajer1;
+            NameTb.Text = stajer1.Surname + " " + stajer1.Name + " " + stajer1.Patronymic;
             this.DataContext = this;
         }
 
         private void firstDayBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new FirstDayFabricPage());
+            NavigationService.Navigate(new FirstDayFabricPage(stajer1));
         }
 
         private void secondDayBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SecondDayMashinePages());
+            NavigationService.Navigate(new SecondDayMashinePages(stajer1));
         }
 
         private void thirdDayBtn_Click(object sender, RoutedEventArgs e)
@@ -52,17 +53,17 @@ namespace YoxaStudy.Pages
 
         private void forthDayBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ForthDayPantsPages());
+            NavigationService.Navigate(new ForthDayPantsPages(stajer1));
         }
 
         private void fivethDayBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new FivesDayBuilsingsPages());
+            NavigationService.Navigate(new FivesDayBuilsingsPages(stajer1));
         }
 
         private void sixthDayBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SixthDayTestPages());
+            NavigationService.Navigate(new SixthDayTestPages(stajer1));
         }
 
         private void logOutBtn_Click(object sender, RoutedEventArgs e)
@@ -73,8 +74,13 @@ namespace YoxaStudy.Pages
         private void tshortLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var t = ((sender as ListView).SelectedItem as Data.Task);
-            Steps2Window stepsWindow = new Steps2Window(t);   
+            Steps2Window stepsWindow = new Steps2Window(t, stajer1);   
             stepsWindow.Show();
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new CabinetUserPage(stajer1));
         }
     }
 }

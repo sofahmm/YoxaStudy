@@ -23,47 +23,237 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image Source="/Resurses/user.jpg"
-               Grid.RowSpan="3"/>
+        <Image Source="{Binding sta.Image}"
+               Grid.RowSpan="3"
+               Margin="10"
+               x:Name="UserAvatImg"
+               Grid.Column="3"
+               Width="300"/>
 
-        <TextBlock Text="заглушка"
-                   Grid.Column="1"
-                   Grid.Row="0"
-                   FontSize="24"
-                   Margin="10 0 0 0"
-                   VerticalAlignment="Center"/>
-        <TextBlock Text="заглушка"
-                   Grid.Column="1"
-                   Grid.Row="1"
-                   FontSize="24"
-                   Margin="10 0 0 0"
-                   VerticalAlignment="Top"/>
-        <TextBlock Text="заглушка"
-                   Grid.Column="1"
-                   Grid.Row="2"
-                   FontSize="24"
-                   Margin="10 0 0 0"
-                   VerticalAlignment="Top"/>
+        <Button x:Name="ChangePhotoBtn"
+                Grid.Row="3"
+                Grid.Column="3"
+                Click="ChangePhotoBtn_Click"
+                Height="80"
+                Background="White"
+                VerticalAlignment="Center"
+                Margin="80 0 80 0"
+                FontSize="20"
+                BorderBrush="Black"
+                BorderThickness="1"
+                FontWeight="Regular"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Center" Cursor="Hand">
+            <TextBlock TextWrapping="Wrap"
+                       TextAlignment="Center">
+                ИЗМЕНИТЬ ФОТОГРАФИЮ
+            </TextBlock>
+        </Button>
 
-        <TextBlock Text="заглушка"
-                   Grid.Column="2"
-                   Grid.ColumnSpan="2"
-                   Grid.Row="0"
-                   FontSize="24"
+        <TextBlock x:Name="SurnameTb"
+                   FontSize="34"
+                   Grid.Column="3"
+                   Grid.Row="4"
+                   Grid.RowSpan="2"
+                   FontWeight="Regular"
+                   Margin="70 0 70 0"
+                   TextWrapping="Wrap"
+                   TextAlignment="Center"
                    HorizontalAlignment="Center"
-                   Margin="10 0 0 0"
-                   VerticalAlignment="Center"/>
+                   VerticalAlignment="Top"/>
+        <ProgressBar x:Name="StajerPb"
+                     Grid.Column="3"
+                     Grid.Row="6"
+                     Margin="10 0 10 0"
+                     Height="25"/>
 
-        <CheckBox IsChecked="False"
-                  Content="Custom Size"
-                  materialDesign:CheckBoxAssist.CheckBoxSize="30" 
-                  Grid.Column="2"
-                  Grid.ColumnSpan="2"
+        <Button x:Name="BackBtn"
+                Click="BackBtn_Click"
+                Grid.Column="3"
+                Grid.Row="7"
+                Content="МЕНЮ"
+                Height="40"
+                Width="100"
+                Background="White"
+                BorderBrush="Black"
+                BorderThickness="2" Cursor="Hand"/>
+
+        <TextBlock Text="1 ДЕНЬ"
+                   FontSize="30"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Column="0"
+                   Grid.Row="0"/>
+        <CheckBox Grid.Column="0"
                   Grid.Row="1"
-                  BorderBrush="DimGray"
+                  x:Name="done1dCb"
+                  HorizontalAlignment="Center"
+                  Content=" изучено"
+                  FontSize="12"
+                  HorizontalContentAlignment="Center"
+                  Style="{StaticResource MaterialDesignFilterChipCheckBox}"
                   Cursor="Hand"
-                  Margin="50 0 0 0"/>
+                  IsEnabled="False">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBlock Text="Изучение основной информации о тканях"
+                   FontSize="26"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Grid.Column="0"
+                   Grid.Row="2"/>
+
+        <TextBlock Text="2 ДЕНЬ"
+                   FontSize="30"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Column="1"
+                   Grid.Row="0"/>
+        <CheckBox Grid.Column="1"
+                  Grid.Row="1"
+                  x:Name="done2dCb"
+                  HorizontalAlignment="Center"
+                  Content=" изучено"
+                  FontSize="12"
+                  HorizontalContentAlignment="Center"
+                  Style="{StaticResource MaterialDesignFilterChipCheckBox}"
+                  Cursor="Hand"
+                  IsEnabled="False">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBlock Text="Изучение основной информации об оборудовании"
+                   FontSize="26"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Grid.Column="1"
+                   Grid.Row="2"/>
+        
+        <TextBlock Text="3 ДЕНЬ"
+                   FontSize="30"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Column="2"
+                   Grid.Row="0"/>
+        <CheckBox Grid.Column="2"
+                  Grid.Row="1"
+                  x:Name="done3dCb"
+                  HorizontalAlignment="Center"
+                  Content=" изучено"
+                  FontSize="12"
+                  HorizontalContentAlignment="Center"
+                  Style="{StaticResource MaterialDesignFilterChipCheckBox}"
+                  Cursor="Hand"
+                  IsEnabled="False">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBlock Text="Изучение основной информации о кофтах"
+                   FontSize="26"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Grid.Column="2"
+                   Grid.Row="2"/>
+        
+        <TextBlock Text="4 ДЕНЬ"
+                   FontSize="30"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Column="0"
+                   Grid.Row="4"/>
+        <CheckBox Grid.Column="0"
+                  Grid.Row="5"
+                  x:Name="done4dCb"
+                  HorizontalAlignment="Center"
+                  Content=" изучено"
+                  FontSize="12"
+                  HorizontalContentAlignment="Center"
+                  Style="{StaticResource MaterialDesignFilterChipCheckBox}"
+                  Cursor="Hand"
+                  IsEnabled="False">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBlock Text="Изучение основной информации о штанах"
+                   FontSize="26"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Grid.Column="0"
+                   Grid.Row="6"/>
+        
+        <TextBlock Text="5 ДЕНЬ"
+                   FontSize="30"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Column="1"
+                   Grid.Row="4"/>
+        <CheckBox Grid.Column="1"
+                  Grid.Row="5"
+                  x:Name="done5dCb"
+                  HorizontalAlignment="Center"
+                  Content=" изучено"
+                  FontSize="12"
+                  HorizontalContentAlignment="Center"
+                  Style="{StaticResource MaterialDesignFilterChipCheckBox}"
+                  Cursor="Hand"
+                  IsEnabled="False">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBlock Text="Изучение основной информации о сборке на маркет-плейсы"
+                   FontSize="26"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Grid.Column="1"
+                   Grid.Row="6"/>
+        
+        <TextBlock Text="6 ДЕНЬ"
+                   FontSize="30"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.Column="2"
+                   Grid.Row="4"/>
+        <CheckBox Grid.Column="2"
+                  Grid.Row="5"
+                  x:Name="done6dCb"
+                  HorizontalAlignment="Center"
+                  Content=" изучено"
+                  FontSize="12"
+                  HorizontalContentAlignment="Center"
+                  Style="{StaticResource MaterialDesignFilterChipCheckBox}"
+                  Cursor="Hand"
+                  IsEnabled="False">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBlock Text="Итоговый тест! Ты молодец!"
+                   FontSize="26"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Grid.Column="2"
+                   Grid.Row="6"/>
     </Grid>
 </Page>

@@ -17,7 +17,7 @@ namespace YoxaStudy.Data
         public int ID { get; set; }
         public Nullable<int> IdStajer { get; set; }
         public Nullable<int> IdTask { get; set; }
-        public Nullable<bool> IsDone { get; set; }
+        public Nullable<int> Counr { get; set; }
     
         public virtual Stajer Stajer { get; set; }
         public virtual Task Task { get; set; }

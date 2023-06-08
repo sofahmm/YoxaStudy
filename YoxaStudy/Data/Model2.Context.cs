@@ -36,5 +36,7 @@ namespace YoxaStudy.Data
         public virtual DbSet<TypeUser> TypeUser { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Steps> Steps { get; set; }
+        public virtual DbSet<StajerDay> StajerDay { get; set; }
+        public virtual DbSet<StepTask> StepTask { get; set; }
     }
 }

@@ -35,6 +35,10 @@
     <EntitySetMapping Name="Stajer">
       <EntityTypeMapping TypeName="DiplomModel.Stajer">
         <MappingFragment StoreEntitySet="Stajer">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="DateOfRegistr" ColumnName="DateOfRegistr" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -47,10 +51,10 @@
     <EntitySetMapping Name="StajerTask">
       <EntityTypeMapping TypeName="DiplomModel.StajerTask">
         <MappingFragment StoreEntitySet="StajerTask">
+          <ScalarProperty Name="Counr" ColumnName="Counr" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="IdStajer" ColumnName="IdStajer" />
           <ScalarProperty Name="IdTask" ColumnName="IdTask" />
-          <ScalarProperty Name="IsDone" ColumnName="IsDone" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -120,6 +124,54 @@
           <ScalarProperty Name="Image2" ColumnName="Image2" />
           <ScalarProperty Name="Image1" ColumnName="Image1" />
           <ScalarProperty Name="IdTask" ColumnName="IdTask" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StajerDay">
+      <EntityTypeMapping TypeName="DiplomModel.StajerDay">
+        <MappingFragment StoreEntitySet="StajerDay">
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+          <ScalarProperty Name="IdDay" ColumnName="IdDay" />
+          <ScalarProperty Name="IdStajer" ColumnName="IdStajer" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StepTask">
+      <EntityTypeMapping TypeName="DiplomModel.StepTask">
+        <MappingFragment StoreEntitySet="StepTask">
+          <ScalarProperty Name="Step10" ColumnName="Step10" />
+          <ScalarProperty Name="Step9" ColumnName="Step9" />
+          <ScalarProperty Name="Step8" ColumnName="Step8" />
+          <ScalarProperty Name="Step7" ColumnName="Step7" />
+          <ScalarProperty Name="Step6" ColumnName="Step6" />
+          <ScalarProperty Name="Step5" ColumnName="Step5" />
+          <ScalarProperty Name="Step4" ColumnName="Step4" />
+          <ScalarProperty Name="Step3" ColumnName="Step3" />
+          <ScalarProperty Name="Step2" ColumnName="Step2" />
+          <ScalarProperty Name="Step1" ColumnName="Step1" />
+          <ScalarProperty Name="IdTask" ColumnName="IdTask" />
+          <ScalarProperty Name="Image10" ColumnName="Image10" />
+          <ScalarProperty Name="Image9" ColumnName="Image9" />
+          <ScalarProperty Name="Image8" ColumnName="Image8" />
+          <ScalarProperty Name="Image7" ColumnName="Image7" />
+          <ScalarProperty Name="Image6" ColumnName="Image6" />
+          <ScalarProperty Name="Image5" ColumnName="Image5" />
+          <ScalarProperty Name="Image4" ColumnName="Image4" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Description10" ColumnName="Description10" />
+          <ScalarProperty Name="Description9" ColumnName="Description9" />
+          <ScalarProperty Name="Description8" ColumnName="Description8" />
+          <ScalarProperty Name="Description7" ColumnName="Description7" />
+          <ScalarProperty Name="Description6" ColumnName="Description6" />
+          <ScalarProperty Name="Description5" ColumnName="Description5" />
+          <ScalarProperty Name="Description4" ColumnName="Description4" />
+          <ScalarProperty Name="Description3" ColumnName="Description3" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -30,9 +30,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image Source="/Resurses/user.jpg"
+        <Image Source="{Binding stjr.Image}"
                Grid.RowSpan="2"/>
-        <TextBlock Text="Флегматов Енокентий"
+        <TextBlock x:Name="NameTb"
                    FontSize="22"
                    TextWrapping="Wrap"
                    Grid.Row="2"

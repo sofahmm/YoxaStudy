@@ -18,6 +18,7 @@ namespace YoxaStudy.Data
         public Day()
         {
             this.Task = new HashSet<Task>();
+            this.StajerDay = new HashSet<StajerDay>();
         }
     
         public int ID { get; set; }
@@ -25,5 +26,7 @@ namespace YoxaStudy.Data
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Task> Task { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StajerDay> StajerDay { get; set; }
     }
 }

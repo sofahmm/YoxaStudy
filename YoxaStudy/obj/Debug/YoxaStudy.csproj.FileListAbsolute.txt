@@ -58,3 +58,15 @@ C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\CabinetUserPage.g
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\CabinetUserPage.baml
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Windows\Steps2Window.g.cs
 C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Windows\Steps2Window.baml
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\Quest1Page.g.cs
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Windows\Quest1Window.g.cs
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\Quest1Page.baml
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Windows\Quest1Window.baml
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\Quest2Page.g.cs
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\Quest3Page.g.cs
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\Quest4Page.g.cs
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\Quest2Page.baml
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\Quest3Page.baml
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\Quest4Page.baml
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\Quest5Page.g.cs
+C:\Users\ASUS\source\repos\YoxaStudy\YoxaStudy\obj\Debug\Pages\Quest5Page.baml

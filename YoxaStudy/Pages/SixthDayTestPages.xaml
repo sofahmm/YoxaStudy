@@ -30,9 +30,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image Source="/Resurses/user.jpg"
-               Grid.RowSpan="2"/>
-        <TextBlock Text="Флегматов Енокентий"
+        <Image Source="{Binding stjr.Image}"
+               Grid.RowSpan="2"
+               MouseDown="Image_MouseDown"/>
+        <TextBlock x:Name="NameTb"
                    FontSize="22"
                    TextWrapping="Wrap"
                    Grid.Row="2"
@@ -103,5 +104,10 @@
                        FontSize="20"
                        TextAlignment="Center"/>
         </Button>
+
+        <Frame x:Name="navFr"
+               Grid.Column="1"
+               Grid.ColumnSpan="5"
+               Grid.RowSpan="10"/>
     </Grid>
 </Page>

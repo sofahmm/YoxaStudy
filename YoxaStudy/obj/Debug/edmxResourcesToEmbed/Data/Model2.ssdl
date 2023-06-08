@@ -38,6 +38,19 @@
     <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
     <Property Name="Birthdate" Type="date" />
     <Property Name="Image" Type="varbinary(max)" />
+    <Property Name="DateOfRegistr" Type="date" />
+    <Property Name="IsVisible" Type="bit" />
+    <Property Name="Login" Type="nvarchar" MaxLength="8" />
+    <Property Name="Password" Type="nvarchar" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="StajerDay">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdStajer" Type="int" />
+    <Property Name="IdDay" Type="int" />
+    <Property Name="Counter" Type="int" />
   </EntityType>
   <EntityType Name="StajerTask">
     <Key>
@@ -46,7 +59,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdStajer" Type="int" />
     <Property Name="IdTask" Type="int" />
-    <Property Name="IsDone" Type="bit" />
+    <Property Name="Counr" Type="int" />
   </EntityType>
   <EntityType Name="Steps">
     <Key>
@@ -64,6 +77,43 @@
     <Property Name="Image8" Type="varbinary(max)" />
     <Property Name="Image9" Type="varbinary(max)" />
     <Property Name="Image10" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="StepTask">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description1" Type="nvarchar(max)" />
+    <Property Name="Description2" Type="nvarchar(max)" />
+    <Property Name="Description3" Type="nvarchar(max)" />
+    <Property Name="Description4" Type="nvarchar(max)" />
+    <Property Name="Description5" Type="nvarchar(max)" />
+    <Property Name="Description6" Type="nvarchar(max)" />
+    <Property Name="Description7" Type="nvarchar(max)" />
+    <Property Name="Description8" Type="nvarchar(max)" />
+    <Property Name="Description9" Type="nvarchar(max)" />
+    <Property Name="Description10" Type="nvarchar(max)" />
+    <Property Name="Image1" Type="varbinary(max)" />
+    <Property Name="Image2" Type="varbinary(max)" />
+    <Property Name="Image3" Type="varbinary(max)" />
+    <Property Name="Image4" Type="varbinary(max)" />
+    <Property Name="Image5" Type="varbinary(max)" />
+    <Property Name="Image6" Type="varbinary(max)" />
+    <Property Name="Image7" Type="varbinary(max)" />
+    <Property Name="Image8" Type="varbinary(max)" />
+    <Property Name="Image9" Type="varbinary(max)" />
+    <Property Name="Image10" Type="varbinary(max)" />
+    <Property Name="IdTask" Type="int" />
+    <Property Name="Step1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step3" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step4" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step5" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step6" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step7" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step8" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step9" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step10" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -124,6 +174,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_StajerDay_Day">
+    <End Role="Day" Type="Self.Day" Multiplicity="0..1" />
+    <End Role="StajerDay" Type="Self.StajerDay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Day">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StajerDay">
+        <PropertyRef Name="IdDay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StajerDay_Stajer">
+    <End Role="Stajer" Type="Self.Stajer" Multiplicity="0..1" />
+    <End Role="StajerDay" Type="Self.StajerDay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stajer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StajerDay">
+        <PropertyRef Name="IdStajer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_StajerTask_Stajer">
     <End Role="Stajer" Type="Self.Stajer" Multiplicity="0..1" />
     <End Role="StajerTask" Type="Self.StajerTask" Multiplicity="*" />
@@ -156,6 +230,18 @@
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="Steps">
+        <PropertyRef Name="IdTask" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StepTask_Task">
+    <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+    <End Role="StepTask" Type="Self.StepTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StepTask">
         <PropertyRef Name="IdTask" />
       </Dependent>
     </ReferentialConstraint>
@@ -213,8 +299,10 @@
     <EntitySet Name="Day" EntityType="Self.Day" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StageOfTask" EntityType="Self.StageOfTask" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Stajer" EntityType="Self.Stajer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StajerDay" EntityType="Self.StajerDay" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StajerTask" EntityType="Self.StajerTask" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Steps" EntityType="Self.Steps" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StepTask" EntityType="Self.StepTask" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Task" EntityType="Self.Task" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeMaterial" EntityType="Self.TypeMaterial" Schema="dbo" store:Type="Tables" />
@@ -223,6 +311,14 @@
     <AssociationSet Name="FK_StageOfTask_Task" Association="Self.FK_StageOfTask_Task">
       <End Role="Task" EntitySet="Task" />
       <End Role="StageOfTask" EntitySet="StageOfTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StajerDay_Day" Association="Self.FK_StajerDay_Day">
+      <End Role="Day" EntitySet="Day" />
+      <End Role="StajerDay" EntitySet="StajerDay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StajerDay_Stajer" Association="Self.FK_StajerDay_Stajer">
+      <End Role="Stajer" EntitySet="Stajer" />
+      <End Role="StajerDay" EntitySet="StajerDay" />
     </AssociationSet>
     <AssociationSet Name="FK_StajerTask_Stajer" Association="Self.FK_StajerTask_Stajer">
       <End Role="Stajer" EntitySet="Stajer" />
@@ -235,6 +331,10 @@
     <AssociationSet Name="FK_Steps_Task" Association="Self.FK_Steps_Task">
       <End Role="Task" EntitySet="Task" />
       <End Role="Steps" EntitySet="Steps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StepTask_Task" Association="Self.FK_StepTask_Task">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="StepTask" EntitySet="StepTask" />
     </AssociationSet>
     <AssociationSet Name="FK_Task_Clothes" Association="Self.FK_Task_Clothes">
       <End Role="Clothes" EntitySet="Clothes" />

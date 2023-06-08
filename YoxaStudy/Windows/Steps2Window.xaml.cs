@@ -23,22 +23,49 @@ namespace YoxaStudy.Windows
     {
         public static Steps stps { get; set; }
         public static List<Steps> steps { get; set; }
-        public Steps2Window(Data.Task step)
+        public static List<StepTask> stepTasks { get; set; }
+        public static Data.Task step1 { get; set; }
+        public static StajerTask stajerTask = new StajerTask();
+        public static Stajer stajer1 = new Stajer();
+        int test = 0;
+        public Steps2Window(Data.Task step, Stajer stajer)
         {
             InitializeComponent();
-            steps = new List<Steps>(DbConnection.diplomEntities.Steps.ToList());
-            //Image1.Source = steps;
-            //steps.IdTask = step;
-            foreach (Steps i in steps)
-            {
-                if (step.ID == i.IdTask)
-                {
-                    testTb.Text = i.IdTask.ToString();
-                    ImageLv.ItemsSource = steps;
-                    
-                }
-            }
+            stepTasks = new List<StepTask>(DbConnection.diplomEntities.StepTask.Where(i => i.IdTask == step.ID).ToList());
+            MiniDescTb.Text = step.MiniDescription;
+            step1 = step;
+            stajer1 = stajer;
             this.DataContext = this;
+        }
+
+        private void doneCb_Checked(object sender, RoutedEventArgs e)
+        {
+            //if (doneCb.IsChecked == true)
+            //{
+            //    stajerTask.IdStajer = 1;
+            //    stajerTask.IdTask = test;
+            //    stajerTask.IsDone = true;
+            //    DbConnection.diplomEntities.StajerTask.Add(stajerTask);
+            //    DbConnection.diplomEntities.SaveChanges();
+            //    MessageBox.Show("HAPPY!");
+            //    this.Close();
+            //}
+            //else
+            //    MessageBox.Show(":(");
+
+        }
+
+        private void doneCb_Checked_1(object sender, RoutedEventArgs e)
+        {
+            if(doneCb.IsChecked == true)
+            {
+                stajerTask.IdStajer = stajer1.ID;
+                stajerTask.IdTask = step1.ID;
+                stajerTask.Counr = 5;
+                DbConnection.diplomEntities.StajerTask.Add(stajerTask);
+                DbConnection.diplomEntities.SaveChanges();
+                this.Close();
+            }
         }
     }
 }

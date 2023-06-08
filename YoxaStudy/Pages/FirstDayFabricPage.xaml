@@ -31,16 +31,14 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image Source="/Resurses/user.jpg"
-               Grid.RowSpan="3"
+        <Image Source="{Binding stjr.Image}"
+               Grid.RowSpan="2"
                Height="180"
                Cursor="Hand"
                MouseDown="Image_MouseDown"
                VerticalAlignment="Top"/>
-        <TextBlock Text="Флегматов Енокентий"
+        <TextBlock x:Name="NameTb"
                    FontSize="22"
-                   VerticalAlignment="Bottom"
-                   Height="50"
                    TextWrapping="Wrap"
                    Grid.Row="2"
                    TextAlignment="Center"/>
@@ -53,7 +51,7 @@
             <TextBlock TextWrapping="Wrap"
                        Text="День первый: ткани"
                        TextAlignment="Center"
-                       FontSize="20"
+                       FontSize="22"
                        FontWeight="DemiBold"/>
         </Button>
         <Button x:Name="secondDayBtn"
@@ -62,7 +60,7 @@
                 Height="80">
             <TextBlock Text="День второй: оборудование"
                        TextWrapping="Wrap"
-                       FontSize="20"
+                       FontSize="22"
                        TextAlignment="Center"/>
         </Button>
         <Button x:Name="thirdDayBtn"
@@ -89,7 +87,7 @@
                 Height="80">
             <TextBlock Text="День пятый: сборка"
                        TextWrapping="Wrap"
-                       FontSize="20"
+                       FontSize="22"
                        TextAlignment="Center"/>
         </Button>
         <Button x:Name="sixthDayBtn"
@@ -476,18 +474,22 @@
                   HorizontalContentAlignment="Center"
                   Style="{StaticResource MaterialDesignFilterChipCheckBox}"
                   Grid.Row="4" Cursor="Hand"
-                  Checked="CheckBox_Checked_1">
+                  Checked="doneCb_Checked">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
 
-        <Image Source="/Resurses/good.png"
-               Grid.Column="4"
-               x:Name="GoodImg"
-               Grid.ColumnSpan="2"
-               Grid.Row="5"
-               Grid.RowSpan="5"
-               Visibility="Hidden"/>
+        <TextBlock Text="Ты молодец! Продолжай в том же духе!"
+                   Grid.Column="4"
+                   FontSize="22"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap"
+                   x:Name="GoodTb"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="5"
+                   Grid.RowSpan="5"
+                   Visibility="Hidden"/>
     </Grid>
 </Page>

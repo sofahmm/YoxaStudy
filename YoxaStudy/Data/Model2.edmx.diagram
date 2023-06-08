@@ -24,6 +24,11 @@
         <AssociationConnector Association="DiplomModel.FK_User_TypeUser" ManuallyRouted="false" />
         <EntityTypeShape EntityType="DiplomModel.Steps" Width="1.5" PointX="5.25" PointY="12.25" />
         <AssociationConnector Association="DiplomModel.FK_Steps_Task" />
+        <EntityTypeShape EntityType="DiplomModel.StajerDay" Width="1.5" PointX="8.25" PointY="1.5" />
+        <AssociationConnector Association="DiplomModel.FK_StajerDay_Day" />
+        <AssociationConnector Association="DiplomModel.FK_StajerDay_Stajer" />
+        <EntityTypeShape EntityType="DiplomModel.StepTask" Width="1.5" PointX="5.25" PointY="17.375" />
+        <AssociationConnector Association="DiplomModel.FK_StepTask_Task" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

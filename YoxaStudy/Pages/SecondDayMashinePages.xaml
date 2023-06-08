@@ -31,9 +31,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image Source="/Resurses/user.jpg"
-               Grid.RowSpan="2"/>
-        <TextBlock Text="Флегматов Енокентий"
+        <Image Source="{Binding stjr.Image}"
+               Grid.RowSpan="2"
+               MouseDown="Image_MouseDown"/>
+        <TextBlock x:Name="NameTb"
                    FontSize="22"
                    TextWrapping="Wrap"
                    Grid.Row="2"
@@ -105,11 +106,14 @@
                        TextAlignment="Center"/>
         </Button>
 
-        <StackPanel Orientation="Horizontal"
-                    Grid.Column="1"
+        <ScrollViewer Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Grid.Row="0"
                     Grid.RowSpan="10"
-                    Grid.ColumnSpan="4"
-                    Margin="0 20 0 20">
+                    Margin="0 20 0 20"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Horizontal">
             <Expander Background="LightGray"
                       ExpandDirection="Right"
                       BorderBrush="Black"
@@ -1247,5 +1251,40 @@
                 </Expander.Content>
             </Expander>
         </StackPanel>
+        </ScrollViewer>
+
+        <TextBlock Text="Изучение данного раздела необходимо для ознакомления стажера с оборудованием, на котором ему необходимо будет работать."
+                   TextAlignment="Center"
+                   Grid.Column="4"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="2"
+                   Grid.RowSpan="2"
+                   TextWrapping="Wrap"
+                   FontSize="22"/>
+        <CheckBox Grid.Column="4"
+                  x:Name="doneCb"
+                  HorizontalAlignment="Center"
+                  Grid.ColumnSpan="2"
+                  Content=" изучено"
+                  FontSize="12"
+                  HorizontalContentAlignment="Center"
+                  Style="{StaticResource MaterialDesignFilterChipCheckBox}"
+                  Grid.Row="4" Cursor="Hand"
+                  Checked="doneCb_Checked">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBlock Text="Ты молодец! Продолжай в том же духе!"
+                   Grid.Column="4"
+                   TextWrapping="Wrap"
+                   x:Name="GoodTb"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="5"
+                   FontSize="22"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.RowSpan="5"
+                   Visibility="Hidden"/>
     </Grid>
 </Page>

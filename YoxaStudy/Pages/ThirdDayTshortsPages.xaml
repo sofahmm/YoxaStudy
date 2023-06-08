@@ -31,9 +31,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image Source="/Resurses/user.jpg"
-               Grid.RowSpan="2"/>
-        <TextBlock Text="Флегматов Енокентий"
+        <Image Source="{Binding stjr.Image}"
+               Grid.RowSpan="2"
+               MouseDown="Image_MouseDown"/>
+        <TextBlock x:Name="NameTb"
                    FontSize="22"
                    TextWrapping="Wrap"
                    Grid.Row="2"
@@ -105,237 +106,57 @@
                        TextAlignment="Center"/>
         </Button>
 
-        <materialDesign:Card Grid.ColumnSpan="4"
-                             Grid.Column="1"
-                             Grid.Row="1"
-                             HorizontalAlignment="Center"
-                             Grid.RowSpan="9"
-                             Margin="20 0 0 20">
-            <TabControl Width="1020"
-                        materialDesign:ColorZoneAssist.Mode="PrimaryLight"
-                        Style="{StaticResource MaterialDesignFilledTabControl}">
-                 <TabItem Header="ФУТБОЛКИ" 
-                          Cursor="Hand">
-                    <StackPanel>
-                        <ListView ItemsSource="{Binding productsTShorts}"
-                                  x:Name="tshortLv"
-                                  SelectionChanged="tshortLv_SelectionChanged">
-                            <ListView.View>
-                                <GridView>
-                                    <GridView.Columns>
-                                        <GridViewColumn Header="Фото"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <Image Source="{Binding ImageClothes}"
-                                                       Height="200"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Название"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding Clothes.Name}"
-                                                               Foreground="White"
-                                                               FontSize="20"
-                                                               Width="200"
-                                                               Margin="20 70 0 0"
-                                                               FontWeight="DemiBold"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Размерный ряд"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <StackPanel Margin="20 40 0 0">
-                                                        <TextBlock Text="S" 
-                                                                   FontSize="18"/>
-                                                        <TextBlock Text="M"
-                                                                   FontSize="18"/>
-                                                        <TextBlock Text="L"
-                                                                   FontSize="18"/>
-                                                        <TextBlock Text="XL"
-                                                                   FontSize="18"/>
-                                                    </StackPanel>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Полотно"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding TypeMaterial.Name}"
-                                                               TextWrapping="Wrap"
-                                                               FontSize="20"
-                                                               Margin="0 70 0 0"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Статус"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding MiniDescription}"
-                                                               TextWrapping="Wrap"
-                                                               FontSize="16"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                    </GridView.Columns>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                    </StackPanel>
-                </TabItem>
-                <TabItem Header="ЛОНГСЛИВЫ">
-                    <StackPanel>
-                        <ListView ItemsSource="{Binding productsLongsliv}"
-                                  x:Name="longslivLv">
-                            <ListView.View>
-                                <GridView>
-                                    <GridView.Columns>
-                                        <GridViewColumn Header="Фото"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <Image Source="{Binding ImageClothes}"
-                                                       Height="200"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Название"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding Clothes.Name}"
-                                                               Foreground="White"
-                                                               FontSize="20"
-                                                               Width="200"
-                                                               Margin="20 70 0 0"
-                                                               FontWeight="DemiBold"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Размерный ряд"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <StackPanel Margin="20 40 0 0">
-                                                        <TextBlock Text="S" 
-                                                                   FontSize="18"/>
-                                                        <TextBlock Text="M"
-                                                                   FontSize="18"/>
-                                                        <TextBlock Text="L"
-                                                                   FontSize="18"/>
-                                                        <TextBlock Text="XL"
-                                                                   FontSize="18"/>
-                                                    </StackPanel>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Полотно"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding TypeMaterial.Name}"
-                                                               TextWrapping="Wrap"
-                                                               FontSize="20"
-                                                               Margin="0 70 0 0"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Статус"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding MiniDescription}"
-                                                               TextWrapping="Wrap"
-                                                               FontSize="16"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                    </GridView.Columns>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                    </StackPanel>
-                </TabItem>
-                <TabItem Header="СВИТШОТЫ">
-                    <StackPanel>
-                        <ListView ItemsSource="{Binding productsSvitshot}"
-                                  x:Name="SvitshotLv">
-                            <ListView.View>
-                                <GridView>
-                                    <GridView.Columns>
-                                        <GridViewColumn Header="Фото"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <Image Source="{Binding ImageClothes}"
-                                                       Height="200"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Название"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding Clothes.Name}"
-                                                               Foreground="White"
-                                                               FontSize="20"
-                                                               Width="200"
-                                                               Margin="20 70 0 0"
-                                                               FontWeight="DemiBold"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Размерный ряд"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <StackPanel Margin="20 40 0 0">
-                                                        <TextBlock Text="S" 
-                                                                   FontSize="18"/>
-                                                        <TextBlock Text="M"
-                                                                   FontSize="18"/>
-                                                        <TextBlock Text="L"
-                                                                   FontSize="18"/>
-                                                        <TextBlock Text="XL"
-                                                                   FontSize="18"/>
-                                                    </StackPanel>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Полотно"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding TypeMaterial.Name}"
-                                                               TextWrapping="Wrap"
-                                                               FontSize="20"
-                                                               Margin="0 70 0 0"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="Описание"
-                                                        Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding MiniDescription}"
-                                                               TextWrapping="Wrap"
-                                                               FontSize="16"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                    </GridView.Columns>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                    </StackPanel>
-                </TabItem>
-            </TabControl>
-        </materialDesign:Card>
+        <ListView ItemsSource="{Binding products}"
+                  x:Name="tshortLv"
+                  SelectionChanged="tshortLv_SelectionChanged"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="5"
+                  Grid.RowSpan="10"
+                  Margin="10">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="4"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <Border BorderBrush="DarkSlateGray"
+                            BorderThickness="5"
+                            CornerRadius="0">
+                        <StackPanel Orientation="Vertical" 
+                                    Width="280"
+                                    Height="450"
+                                    Background="White"
+                                    Cursor="Hand">
+                            <Image Source="{Binding ImageClothes}"
+                                   Margin="0 10 0 0"
+                                   Height="200"/>
+                            <TextBlock Text="{Binding Clothes.Name}"
+                                       FontSize="20"
+                                       Margin="0 10 0 10 "
+                                       TextWrapping="Wrap"
+                                       TextAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       Foreground="DarkSlateGray"
+                                       FontWeight="Bold"/>
+                            <TextBlock Text="{Binding TypeMaterial.Name}"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center"
+                                       Margin="0 20 0 10"
+                                       Foreground="DarkSlateGray"
+                                       FontWeight="DemiBold"
+                                       FontSize="20"/>
+                            <TextBlock Text="{Binding MiniDescription}"
+                                       TextWrapping="Wrap"
+                                       Margin="10 15 10 10 "
+                                       Foreground="DarkSlateGray"
+                                       FontWeight="DemiBold"
+                                       TextAlignment="Center"
+                                       FontSize="16"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>
