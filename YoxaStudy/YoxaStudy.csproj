@@ -93,6 +93,15 @@
     <Compile Include="Data\StepTask.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Ques7Page.xaml.cs">
+      <DependentUpon>Ques7Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Ques8Page.xaml.cs">
+      <DependentUpon>Ques8Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quest10Page.xaml.cs">
+      <DependentUpon>Quest10Page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Quest1Page.xaml.cs">
       <DependentUpon>Quest1Page.xaml</DependentUpon>
     </Compile>
@@ -107,6 +116,12 @@
     </Compile>
     <Compile Include="Pages\Quest5Page.xaml.cs">
       <DependentUpon>Quest5Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quest6Page.xaml.cs">
+      <DependentUpon>Quest6Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quest9Page.xaml.cs">
+      <DependentUpon>Quest9Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Quest1Window.xaml.cs">
       <DependentUpon>Quest1Window.xaml</DependentUpon>
@@ -199,6 +214,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Ques7Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Ques8Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quest10Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Quest1Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -216,6 +243,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Quest5Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quest6Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Quest9Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -324,6 +359,9 @@
       <DependentUpon>Model2.edmx</DependentUpon>
       <LastGenOutput>Model2.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resurses\theEndOfSteps.jpg" />
+    <Resource Include="Resurses\birki.jpg" />
+    <Resource Include="Resurses\iron.jpeg" />
     <Resource Include="Resurses\longsliv.jpg" />
     <Resource Include="Resurses\siruba.jpg" />
     <Resource Include="Resurses\overlok.png" />

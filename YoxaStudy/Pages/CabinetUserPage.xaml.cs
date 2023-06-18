@@ -55,6 +55,7 @@ namespace YoxaStudy.Pages
             if( countTs1 == countSt1 )
             {
                 done3dCb.IsChecked = true;
+
             }
             if( countTs2 == countSt2)
             {

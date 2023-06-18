@@ -25,7 +25,7 @@
         </Grid.RowDefinitions>
 
         <ListView x:Name="StepsTransLv"
-                  Grid.ColumnSpan="3"
+                  Grid.ColumnSpan="7"
                   Grid.RowSpan="6"
                   HorizontalAlignment="Left"
                   HorizontalContentAlignment="Center"
@@ -53,7 +53,7 @@
                             <TextBlock Text="{Binding Description1}"
                                        TextWrapping="Wrap"
                                        FontSize="22"
-                                       Width="700"
+                                       Width="800"
                                        TextAlignment="Center"
                                        Foreground="Black"/>
                         </StackPanel>
@@ -225,20 +225,21 @@
         </ListView>
 
         <TextBlock Text="Какое изделие у вас должно получиться:"
-                   Grid.Column="3"
+                   Grid.Column="4"
                    Grid.ColumnSpan="3"
+                   Grid.Row="1"
                    FontSize="24"
                    TextWrapping="Wrap"
                    TextAlignment="Center"
                    FontWeight="DemiBold"/>
         <Image Source="{Binding step1.ImageClothes}"
-               Width="300"
-               Height="200"
-               Grid.Column="3"
+               Width="400"
+               Height="300"
+               Grid.Column="4"
                Grid.ColumnSpan="3"
                Grid.Row="1"
                Grid.RowSpan="3"/>
-        <TextBlock Grid.Column="3"
+        <TextBlock Grid.Column="4"
                    Grid.ColumnSpan="3"
                    Grid.Row="4"
                    TextWrapping="Wrap"

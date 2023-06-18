@@ -34,17 +34,22 @@
                Grid.Column="3"
                Width="300"/>
 
+        <Border Grid.Column="3"
+                Grid.RowSpan="8"
+                BorderBrush="Black"
+                BorderThickness="3 0 0 0"/>
         <Button x:Name="ChangePhotoBtn"
                 Grid.Row="3"
                 Grid.Column="3"
                 Click="ChangePhotoBtn_Click"
-                Height="80"
+                Height="70"
+                Width="200"
                 Background="White"
-                VerticalAlignment="Center"
+                VerticalAlignment="Bottom"
                 Margin="80 0 80 0"
-                FontSize="20"
+                FontSize="18"
                 BorderBrush="Black"
-                BorderThickness="1"
+                BorderThickness="2"
                 FontWeight="Regular"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Center" Cursor="Hand">
@@ -55,20 +60,24 @@
         </Button>
 
         <TextBlock x:Name="SurnameTb"
-                   FontSize="34"
+                   FontSize="28"
                    Grid.Column="3"
                    Grid.Row="4"
                    Grid.RowSpan="2"
                    FontWeight="Regular"
-                   Margin="70 0 70 0"
+                   Margin="70 10 70 0"
                    TextWrapping="Wrap"
                    TextAlignment="Center"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Top"/>
+                   VerticalAlignment="Center"/>
         <ProgressBar x:Name="StajerPb"
                      Grid.Column="3"
                      Grid.Row="6"
-                     Margin="10 0 10 0"
+                     BorderBrush="Black"
+                     BorderThickness="1"
+                     VerticalAlignment="Top"
+                     VerticalContentAlignment="Top"
+                     Margin="10 10 10 0"
                      Height="25"/>
 
         <Button x:Name="BackBtn"
@@ -76,9 +85,10 @@
                 Grid.Column="3"
                 Grid.Row="7"
                 Content="МЕНЮ"
-                Height="40"
-                Width="100"
-                Background="White"
+                FontSize="20"
+                VerticalAlignment="Top"
+                Height="70"
+                Width="200"
                 BorderBrush="Black"
                 BorderThickness="2" Cursor="Hand"/>
 
@@ -102,7 +112,7 @@
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <TextBlock Text="Изучение основной информации о тканях"
+        <TextBlock Text="Ткани"
                    FontSize="26"
                    TextWrapping="Wrap"
                    HorizontalAlignment="Center"
@@ -131,7 +141,7 @@
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <TextBlock Text="Изучение основной информации об оборудовании"
+        <TextBlock Text="Оборудование"
                    FontSize="26"
                    TextWrapping="Wrap"
                    HorizontalAlignment="Center"
@@ -160,7 +170,7 @@
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <TextBlock Text="Изучение основной информации о кофтах"
+        <TextBlock Text="Плечевые изделия"
                    FontSize="26"
                    TextWrapping="Wrap"
                    HorizontalAlignment="Center"
@@ -189,7 +199,7 @@
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <TextBlock Text="Изучение основной информации о штанах"
+        <TextBlock Text="Поясные изделия"
                    FontSize="26"
                    TextWrapping="Wrap"
                    HorizontalAlignment="Center"
@@ -218,7 +228,7 @@
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <TextBlock Text="Изучение основной информации о сборке на маркет-плейсы"
+        <TextBlock Text="Сборка на маркет-плейсы"
                    FontSize="26"
                    TextWrapping="Wrap"
                    HorizontalAlignment="Center"

@@ -31,6 +31,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        <Border BorderBrush="Black"
+                BorderThickness="0 0 2 0"
+                Grid.RowSpan="10"/>
         <Image Source="{Binding stjr.Image}"
                Grid.RowSpan="2"
                Height="180"
@@ -46,6 +49,8 @@
         <Button x:Name="firstDayBtn"
                 Click="firstDayBtn_Click"
                 Grid.Row="3"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80"
                 Background="SlateGray">
             <TextBlock TextWrapping="Wrap"
@@ -57,6 +62,8 @@
         <Button x:Name="secondDayBtn"
                 Click="secondDayBtn_Click"
                 Grid.Row="4"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock Text="День второй: оборудование"
                        TextWrapping="Wrap"
@@ -66,6 +73,8 @@
         <Button x:Name="thirdDayBtn"
                 Click="thirdDayBtn_Click"
                 Grid.Row="5"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock Text="День третий: футболки, лонгсливы, свитшоты"
                        TextWrapping="Wrap"
@@ -75,6 +84,8 @@
         <Button x:Name="forthDayBtn"
                 Click="forthDayBtn_Click"
                 Grid.Row="6"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock Text="День четвертый: брюки, шорты, леггинсы"
                        TextWrapping="Wrap"
@@ -84,6 +95,8 @@
         <Button x:Name="fivethDayBtn"
                 Click="fivethDayBtn_Click"
                 Grid.Row="7"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock Text="День пятый: сборка"
                        TextWrapping="Wrap"
@@ -93,6 +106,8 @@
         <Button x:Name="sixthDayBtn"
                 Click="sixthDayBtn_Click"
                 Grid.Row="8"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock Text="День шестой: итоговый тест"
                        TextWrapping="Wrap"
@@ -102,6 +117,8 @@
         <Button x:Name="logOutBtn"
                 Click="logOutBtn_Click"
                 Grid.Row="9"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock Text="ВЫЙТИ"
                        TextWrapping="Wrap"
@@ -110,7 +127,7 @@
         </Button>
 
         <ScrollViewer Grid.Column="1"
-                    Grid.ColumnSpan="3"
+                    Grid.ColumnSpan="4"
                     Grid.Row="0"
                     Grid.RowSpan="10"
                     Margin="0 20 0 20"
@@ -459,13 +476,14 @@
 
         <TextBlock Text="Изучение данного раздела необходимо для ознакомления стажера с тканями, которые мы используем в производстве."
                    TextAlignment="Center"
-                   Grid.Column="4"
+                   Grid.Column="5"
                    Grid.Row="2"
                    Grid.ColumnSpan="2"
-                   Grid.RowSpan="2"
+                   Grid.RowSpan="3"
+                   Margin="0 0 10 0"
                    TextWrapping="Wrap"
                    FontSize="22"/>
-        <CheckBox Grid.Column="4"
+        <CheckBox Grid.Column="5"
                   x:Name="doneCb"
                   HorizontalAlignment="Center"
                   Grid.ColumnSpan="2"
@@ -473,7 +491,7 @@
                   FontSize="12"
                   HorizontalContentAlignment="Center"
                   Style="{StaticResource MaterialDesignFilterChipCheckBox}"
-                  Grid.Row="4" Cursor="Hand"
+                  Grid.Row="5" Cursor="Hand"
                   Checked="doneCb_Checked">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
@@ -481,10 +499,12 @@
         </CheckBox>
 
         <TextBlock Text="Ты молодец! Продолжай в том же духе!"
-                   Grid.Column="4"
+                   Grid.Column="5"
                    FontSize="22"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   Margin="0 0 10 0"
                    TextWrapping="Wrap"
                    x:Name="GoodTb"
                    Grid.ColumnSpan="2"

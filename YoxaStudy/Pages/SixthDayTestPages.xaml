@@ -30,6 +30,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        <Border BorderBrush="Black"
+                BorderThickness="0 0 2 0"
+                Grid.RowSpan="10"/>
         <Image Source="{Binding stjr.Image}"
                Grid.RowSpan="2"
                MouseDown="Image_MouseDown"/>
@@ -42,6 +45,8 @@
         <Button x:Name="firstDayBtn"
                 Click="firstDayBtn_Click"
                 Grid.Row="3"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock TextWrapping="Wrap"
                        Text="День первый: ткани"
@@ -51,6 +56,8 @@
         <Button x:Name="secondDayBtn"
                 Click="secondDayBtn_Click"
                 Grid.Row="4"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock Text="День второй: оборудование"
                        TextWrapping="Wrap"
@@ -60,6 +67,8 @@
         <Button x:Name="thirdDayBtn"
                 Click="thirdDayBtn_Click"
                 Grid.Row="5"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock Text="День третий: футболки, лонгсливы, свитшоты"
                        TextWrapping="Wrap"
@@ -69,6 +78,8 @@
         <Button x:Name="forthDayBtn"
                 Click="forthDayBtn_Click"
                 Grid.Row="6"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock Text="День четвертый: брюки, шорты, леггинсы"
                        TextWrapping="Wrap"
@@ -78,6 +89,8 @@
         <Button x:Name="fivethDayBtn"
                 Click="fivethDayBtn_Click"
                 Grid.Row="7"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock Text="День пятый: сборка"
                        TextWrapping="Wrap"
@@ -87,6 +100,8 @@
         <Button x:Name="sixthDayBtn"
                 Click="sixthDayBtn_Click"
                 Grid.Row="8"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80"
                 Background="SlateGray">
             <TextBlock Text="День шестой: итоговый тест"
@@ -98,6 +113,8 @@
         <Button x:Name="logOutBtn"
                 Click="logOutBtn_Click"
                 Grid.Row="9"
+                BorderBrush="Black"
+                BorderThickness="2"
                 Height="80">
             <TextBlock Text="ВЫЙТИ"
                        TextWrapping="Wrap"
