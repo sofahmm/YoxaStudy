@@ -23,6 +23,7 @@ namespace YoxaStudy.Pages
     {
         public static Stajer stajer1 = new Stajer();
         public static List<StajerDay> stajerDays { get; set; }
+        public static StajerDay stajerDay = new StajerDay();
         public static Stajer stjr { get; set; }
         public FivesDayBuilsingsPages(Stajer stajer)
         {
@@ -65,12 +66,37 @@ namespace YoxaStudy.Pages
 
         private void logOutBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            stajer1 = null;
+            NavigationService.Navigate(new AuthorizationPage());
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             NavigationService.Navigate(new CabinetUserPage(stajer1));
+        }
+
+        private void doneCb_Checked(object sender, RoutedEventArgs e)
+        {
+            stajerDays = new List<StajerDay>(DbConnection.diplomEntities.StajerDay.ToList());
+            StajerDay sD = stajerDays.FirstOrDefault(i => i.IdStajer == stajer1.ID && i.IdDay == 5);
+            if (doneCb.IsChecked == true)
+            {
+                if (sD == null)
+                {
+                    GoodTb.Visibility = Visibility.Visible;
+                    stajerDay.IdStajer = stajer1.ID;
+                    stajerDay.IdDay = 5;
+                    stajerDay.Counter = 50;
+                    DbConnection.diplomEntities.StajerDay.Add(stajerDay);
+                    DbConnection.diplomEntities.SaveChanges();
+                }
+                else if (sD != null)
+                {
+                    MessageBox.Show("Время двигаться дальше!");
+                }
+            }
+            else if (doneCb.IsChecked == false)
+                GoodTb.Visibility = Visibility.Hidden;
         }
     }
 }

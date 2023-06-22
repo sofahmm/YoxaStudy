@@ -32,7 +32,7 @@ namespace YoxaStudy.Pages
             stjr = stajer1;
             NameTb.Text = stajer1.Surname + " " + stajer1.Name + " " + stajer1.Patronymic;
             this.DataContext = this;
-            navFr.NavigationService.Navigate(new Quest1Page());
+            navFr.NavigationService.Navigate(new Quest1Page(stajer1));
         }
 
         private void firstDayBtn_Click(object sender, RoutedEventArgs e)
@@ -67,7 +67,8 @@ namespace YoxaStudy.Pages
 
         private void logOutBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            stajer1 = null;
+            NavigationService.Navigate(new AuthorizationPage());
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)

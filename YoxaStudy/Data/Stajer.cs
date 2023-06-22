@@ -31,6 +31,7 @@ namespace YoxaStudy.Data
         public Nullable<bool> IsVisible { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public Nullable<int> Counter { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StajerTask> StajerTask { get; set; }

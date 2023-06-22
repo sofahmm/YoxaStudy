@@ -45,6 +45,7 @@
                   Grid.Column="1"
                   Grid.Row="2"
                   Grid.ColumnSpan="4"
+                  Checked="RightCb_Checked"
                   HorizontalAlignment="Center">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2"
@@ -57,6 +58,7 @@
                   x:Name="UnRightCb"
                   Grid.Column="1"
                   Grid.Row="3"
+                  Checked="UnRightCb_Checked"
                   Grid.ColumnSpan="4"
                   HorizontalAlignment="Center">
             <CheckBox.LayoutTransform>
@@ -70,6 +72,7 @@
                   x:Name="UnRightCb2"
                   Grid.Column="1"
                   Grid.Row="4"
+                  Checked="UnRightCb2_Checked"
                   Grid.ColumnSpan="4"
                   HorizontalAlignment="Center">
             <CheckBox.LayoutTransform>

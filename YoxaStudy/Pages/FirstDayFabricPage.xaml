@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="FirstDayFabricPage">
+      Title="Первый день обучения: ткани">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -36,7 +36,6 @@
                 Grid.RowSpan="10"/>
         <Image Source="{Binding stjr.Image}"
                Grid.RowSpan="2"
-               Height="180"
                Cursor="Hand"
                MouseDown="Image_MouseDown"
                VerticalAlignment="Top"/>
@@ -111,7 +110,7 @@
                 Height="80">
             <TextBlock Text="День шестой: итоговый тест"
                        TextWrapping="Wrap"
-                       FontSize="20"
+                       FontSize="22"
                        TextAlignment="Center"/>
         </Button>
         <Button x:Name="logOutBtn"
@@ -444,7 +443,7 @@
                                                                TextWrapping="Wrap"
                                                                Margin="10 10 10 0"
                                                                FontSize="18"
-                                                               Text="Изделия, которые мы изготавливаем из футера:"/>
+                                                               Text="Изделия, которые мы изготавливаем из бифлекса:"/>
                                                         <TextBlock Foreground="Black"
                                                                TextWrapping="Wrap"
                                                                FontSize="18"

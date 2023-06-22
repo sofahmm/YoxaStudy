@@ -359,10 +359,15 @@
       <DependentUpon>Model2.edmx</DependentUpon>
       <LastGenOutput>Model2.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resurses\longsliv.jpg" />
+    <Resource Include="Resurses\Logo.ico" />
+    <Resource Include="Resurses\hudi.jpg" />
+    <Resource Include="Resurses\velosip.jpg" />
+    <Resource Include="Resurses\punkt3.jpg" />
+    <Resource Include="Resurses\punkt2.jpg" />
     <Resource Include="Resurses\theEndOfSteps.jpg" />
     <Resource Include="Resurses\birki.jpg" />
     <Resource Include="Resurses\iron.jpeg" />
-    <Resource Include="Resurses\longsliv.jpg" />
     <Resource Include="Resurses\siruba.jpg" />
     <Resource Include="Resurses\overlok.png" />
     <Resource Include="Resurses\jackPetl.jpg" />

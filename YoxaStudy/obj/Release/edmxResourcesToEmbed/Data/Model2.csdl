@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DiplomModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clothes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Task" Relationship="Self.FK_Task_Clothes" FromRole="Clothes" ToRole="Task" />
+  </EntityType>
+  <EntityType Name="Day">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Task" Relationship="Self.FK_Task_Day" FromRole="Day" ToRole="Task" />
+    <NavigationProperty Name="StajerDay" Relationship="DiplomModel.FK_StajerDay_Day" FromRole="Day" ToRole="StajerDay" />
+  </EntityType>
+  <EntityType Name="StageOfTask">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTask" Type="Int32" />
+    <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Stage1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Stage2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Stage3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Task" Relationship="Self.FK_StageOfTask_Task" FromRole="StageOfTask" ToRole="Task" />
+  </EntityType>
+  <EntityType Name="Stajer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthdate" Type="DateTime" Precision="0" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="StajerTask" Relationship="Self.FK_StajerTask_Stajer" FromRole="Stajer" ToRole="StajerTask" />
+    <NavigationProperty Name="StajerDay" Relationship="DiplomModel.FK_StajerDay_Stajer" FromRole="Stajer" ToRole="StajerDay" />
+    <Property Name="DateOfRegistr" Type="DateTime" Precision="0" />
+    <Property Name="IsVisible" Type="Boolean" />
+    <Property Name="Login" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Counter" Type="Int32" />
+  </EntityType>
+  <EntityType Name="StajerTask">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdStajer" Type="Int32" />
+    <Property Name="IdTask" Type="Int32" />
+    <NavigationProperty Name="Stajer" Relationship="Self.FK_StajerTask_Stajer" FromRole="StajerTask" ToRole="Stajer" />
+    <NavigationProperty Name="Task" Relationship="Self.FK_StajerTask_Task" FromRole="StajerTask" ToRole="Task" />
+    <Property Name="Counr" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdClothes" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ImageClothes" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="IdTypeMaterial" Type="Int32" />
+    <Property Name="MiniDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IdDay" Type="Int32" />
+    <NavigationProperty Name="Clothes" Relationship="Self.FK_Task_Clothes" FromRole="Task" ToRole="Clothes" />
+    <NavigationProperty Name="Day" Relationship="Self.FK_Task_Day" FromRole="Task" ToRole="Day" />
+    <NavigationProperty Name="StageOfTask" Relationship="Self.FK_StageOfTask_Task" FromRole="Task" ToRole="StageOfTask" />
+    <NavigationProperty Name="StajerTask" Relationship="Self.FK_StajerTask_Task" FromRole="Task" ToRole="StajerTask" />
+    <NavigationProperty Name="TypeMaterial" Relationship="Self.FK_Task_TypeMaterial" FromRole="Task" ToRole="TypeMaterial" />
+    <NavigationProperty Name="Steps" Relationship="DiplomModel.FK_Steps_Task" FromRole="Task" ToRole="Steps" />
+    <NavigationProperty Name="StepTask" Relationship="DiplomModel.FK_StepTask_Task" FromRole="Task" ToRole="StepTask" />
+  </EntityType>
+  <EntityType Name="TypeMaterial">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Task" Relationship="Self.FK_Task_TypeMaterial" FromRole="TypeMaterial" ToRole="Task" />
+  </EntityType>
+  <EntityType Name="TypeUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="User" Relationship="Self.FK_User_TypeUser" FromRole="TypeUser" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdTypeUser" Type="Int32" />
+    <NavigationProperty Name="TypeUser" Relationship="Self.FK_User_TypeUser" FromRole="User" ToRole="TypeUser" />
+  </EntityType>
+  <Association Name="FK_Task_Clothes">
+    <End Role="Clothes" Type="Self.Clothes" Multiplicity="0..1" />
+    <End Role="Task" Type="Self.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clothes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="IdClothes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Task_Day">
+    <End Role="Day" Type="Self.Day" Multiplicity="0..1" />
+    <End Role="Task" Type="Self.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Day">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="IdDay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StageOfTask_Task">
+    <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+    <End Role="StageOfTask" Type="Self.StageOfTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StageOfTask">
+        <PropertyRef Name="IdTask" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StajerTask_Stajer">
+    <End Role="Stajer" Type="Self.Stajer" Multiplicity="0..1" />
+    <End Role="StajerTask" Type="Self.StajerTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stajer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StajerTask">
+        <PropertyRef Name="IdStajer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StajerTask_Task">
+    <End Role="Task" Type="Self.Task" Multiplicity="0..1" />
+    <End Role="StajerTask" Type="Self.StajerTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StajerTask">
+        <PropertyRef Name="IdTask" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Task_TypeMaterial">
+    <End Role="TypeMaterial" Type="Self.TypeMaterial" Multiplicity="0..1" />
+    <End Role="Task" Type="Self.Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeMaterial">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="IdTypeMaterial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_TypeUser">
+    <End Role="TypeUser" Type="Self.TypeUser" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeUser">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="IdTypeUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DiplomEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clothes" EntityType="Self.Clothes" />
+    <EntitySet Name="Day" EntityType="Self.Day" />
+    <EntitySet Name="StageOfTask" EntityType="Self.StageOfTask" />
+    <EntitySet Name="Stajer" EntityType="Self.Stajer" />
+    <EntitySet Name="StajerTask" EntityType="Self.StajerTask" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Task" EntityType="Self.Task" />
+    <EntitySet Name="TypeMaterial" EntityType="Self.TypeMaterial" />
+    <EntitySet Name="TypeUser" EntityType="Self.TypeUser" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <AssociationSet Name="FK_Task_Clothes" Association="Self.FK_Task_Clothes">
+      <End Role="Clothes" EntitySet="Clothes" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Task_Day" Association="Self.FK_Task_Day">
+      <End Role="Day" EntitySet="Day" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StageOfTask_Task" Association="Self.FK_StageOfTask_Task">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="StageOfTask" EntitySet="StageOfTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StajerTask_Stajer" Association="Self.FK_StajerTask_Stajer">
+      <End Role="Stajer" EntitySet="Stajer" />
+      <End Role="StajerTask" EntitySet="StajerTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StajerTask_Task" Association="Self.FK_StajerTask_Task">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="StajerTask" EntitySet="StajerTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Task_TypeMaterial" Association="Self.FK_Task_TypeMaterial">
+      <End Role="TypeMaterial" EntitySet="TypeMaterial" />
+      <End Role="Task" EntitySet="Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_TypeUser" Association="Self.FK_User_TypeUser">
+      <End Role="TypeUser" EntitySet="TypeUser" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <EntitySet Name="Steps" EntityType="DiplomModel.Steps" />
+    <AssociationSet Name="FK_Steps_Task" Association="DiplomModel.FK_Steps_Task">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="Steps" EntitySet="Steps" />
+    </AssociationSet>
+    <EntitySet Name="StajerDay" EntityType="DiplomModel.StajerDay" />
+    <AssociationSet Name="FK_StajerDay_Day" Association="DiplomModel.FK_StajerDay_Day">
+      <End Role="Day" EntitySet="Day" />
+      <End Role="StajerDay" EntitySet="StajerDay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StajerDay_Stajer" Association="DiplomModel.FK_StajerDay_Stajer">
+      <End Role="Stajer" EntitySet="Stajer" />
+      <End Role="StajerDay" EntitySet="StajerDay" />
+    </AssociationSet>
+    <EntitySet Name="StepTask" EntityType="DiplomModel.StepTask" />
+    <AssociationSet Name="FK_StepTask_Task" Association="DiplomModel.FK_StepTask_Task">
+      <End Role="Task" EntitySet="Task" />
+      <End Role="StepTask" EntitySet="StepTask" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Steps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTask" Type="Int32" />
+    <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image4" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image5" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image6" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image7" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image8" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image9" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image10" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Task" Relationship="DiplomModel.FK_Steps_Task" FromRole="Steps" ToRole="Task" />
+  </EntityType>
+  <Association Name="FK_Steps_Task">
+    <End Type="DiplomModel.Task" Role="Task" Multiplicity="0..1" />
+    <End Type="DiplomModel.Steps" Role="Steps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Steps">
+        <PropertyRef Name="IdTask" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="StajerDay">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdStajer" Type="Int32" />
+    <Property Name="IdDay" Type="Int32" />
+    <Property Name="Counter" Type="Int32" />
+    <NavigationProperty Name="Day" Relationship="DiplomModel.FK_StajerDay_Day" FromRole="StajerDay" ToRole="Day" />
+    <NavigationProperty Name="Stajer" Relationship="DiplomModel.FK_StajerDay_Stajer" FromRole="StajerDay" ToRole="Stajer" />
+  </EntityType>
+  <Association Name="FK_StajerDay_Day">
+    <End Type="DiplomModel.Day" Role="Day" Multiplicity="0..1" />
+    <End Type="DiplomModel.StajerDay" Role="StajerDay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Day">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StajerDay">
+        <PropertyRef Name="IdDay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StajerDay_Stajer">
+    <End Type="DiplomModel.Stajer" Role="Stajer" Multiplicity="0..1" />
+    <End Type="DiplomModel.StajerDay" Role="StajerDay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stajer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StajerDay">
+        <PropertyRef Name="IdStajer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="StepTask">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image4" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image5" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image6" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image7" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image8" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image9" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Image10" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="IdTask" Type="Int32" />
+    <Property Name="Step1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Step2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Step3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Step4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Step5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Step6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Step7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Step8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Step9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Step10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Task" Relationship="DiplomModel.FK_StepTask_Task" FromRole="StepTask" ToRole="Task" />
+  </EntityType>
+  <Association Name="FK_StepTask_Task">
+    <End Type="DiplomModel.Task" Role="Task" Multiplicity="0..1" />
+    <End Type="DiplomModel.StepTask" Role="StepTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StepTask">
+        <PropertyRef Name="IdTask" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

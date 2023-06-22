@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using YoxaStudy.Data;
 
 namespace YoxaStudy.Pages
 {
@@ -20,14 +21,31 @@ namespace YoxaStudy.Pages
     /// </summary>
     public partial class Quest3Page : Page
     {
-        public Quest3Page()
+        public static Stajer stajer1 = new Stajer();
+        public static Stajer stajer2 { get; set; }
+        public Quest3Page(Stajer stajer)
         {
             InitializeComponent();
+            stajer1 = stajer;
+            stajer2 = stajer;
+            this.DataContext = this;
         }
 
         private void RightCb_Checked(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Quest4Page());
+            stajer2.Counter = stajer2.Counter + 1;
+            DbConnection.diplomEntities.SaveChanges();
+            NavigationService.Navigate(new Quest4Page(stajer1));
+        }
+
+        private void UnRightCb_Checked(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Quest4Page(stajer1));
+        }
+
+        private void UnRightCb2_Checked(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Quest4Page(stajer1));
         }
     }
 }

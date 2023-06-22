@@ -26,14 +26,14 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Вопрос №5"
+        <TextBlock Text="Вопрос №7"
                    Grid.Column="2"
                    Grid.ColumnSpan="2"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontSize="30"
                    FontWeight="Heavy"/>
-        <TextBlock Text="При изготовлении какого типа футболок необходимо внимательно отнестись ко швам?"
+        <TextBlock Text="Каким трем фактам необходимо уделить особое внимание при подготовке к отправке изделия?"
                    Grid.Column="1"
                    Grid.ColumnSpan="4"
                    Grid.Row="1"
@@ -44,39 +44,42 @@
                   x:Name="RightCb"
                   Grid.Column="1"
                   Grid.Row="2"
+                  Checked="RightCb_Checked"
                   Grid.ColumnSpan="4"
                   HorizontalAlignment="Center">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2"
                                     ScaleY="2"/>
             </CheckBox.LayoutTransform>
-            <TextBlock Text="RegularFit"
+            <TextBlock Text="Глажка, эстетичный вид, бирки"
                        VerticalAlignment="Center"/>
         </CheckBox>
         <CheckBox VerticalAlignment="Center"
                   x:Name="UnRightCb"
                   Grid.Column="1"
                   Grid.Row="3"
+                  Checked="UnRightCb_Checked"
                   Grid.ColumnSpan="4"
                   HorizontalAlignment="Center">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2"
                                     ScaleY="2"/>
             </CheckBox.LayoutTransform>
-            <TextBlock Text="Normal    "
+            <TextBlock Text="Кто шил, сколько длится доставка, кто заказчик"
                        VerticalAlignment="Center"/>
         </CheckBox>
         <CheckBox VerticalAlignment="Center"
                   x:Name="UnRightCb2"
                   Grid.Column="1"
                   Grid.Row="4"
+                  Checked="UnRightCb2_Checked"
                   Grid.ColumnSpan="4"
                   HorizontalAlignment="Center">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2"
                                     ScaleY="2"/>
             </CheckBox.LayoutTransform>
-            <TextBlock Text="SlimFit     "
+            <TextBlock Text="Материал, цвет, размер"
                        VerticalAlignment="Center"/>
         </CheckBox>
     </Grid>

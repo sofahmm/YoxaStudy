@@ -61,12 +61,13 @@ namespace YoxaStudy.Pages
 
         private void sixthDayBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SixthDayTestPages(stajer1));
+            MessageBox.Show("К итоговому тесту можно приступить только после завершения 5 дня");
         }
 
         private void logOutBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            stajer1 = null;
+            NavigationService.Navigate(new AuthorizationPage());
         }
 
         private void doneCb_Checked(object sender, RoutedEventArgs e)

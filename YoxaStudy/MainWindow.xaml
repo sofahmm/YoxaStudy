@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YoxaStudy"
         mc:Ignorable="d"
-        Title="yoxa study" Height="450" Width="800">
+        Title="YoxaStudy" 
+        Icon="/Resurses/Logo.ico" Height="450" Width="800">
     <Grid>
         <Frame x:Name="navFRame"
                NavigationUIVisibility="Hidden"/>

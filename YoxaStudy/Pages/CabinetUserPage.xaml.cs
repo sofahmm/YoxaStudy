@@ -75,7 +75,7 @@ namespace YoxaStudy.Pages
                     done4dCb.IsChecked = true;
                 else if (stajerDay.IdDay == 5)
                     done5dCb.IsChecked = true;
-                else if (stajerDay.IdDay == 6)
+                else if (stajerDay.IdDay == 7)
                     done6dCb.IsChecked = true;
             }
             //StajerPb.Value = Convert.ToDouble();

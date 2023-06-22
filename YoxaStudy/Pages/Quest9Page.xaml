@@ -26,57 +26,65 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Вопрос №5"
+        <TextBlock Text="Вопрос №9"
                    Grid.Column="2"
                    Grid.ColumnSpan="2"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontSize="30"
                    FontWeight="Heavy"/>
-        <TextBlock Text="При изготовлении какого типа футболок необходимо внимательно отнестись ко швам?"
+        <TextBlock Text="Какое изделие изображено на выкройке?"
                    Grid.Column="1"
                    Grid.ColumnSpan="4"
                    Grid.Row="1"
                    FontSize="28"
                    TextWrapping="Wrap"
                    TextAlignment="Center"/>
+        <Image Grid.Column="0"
+               Grid.ColumnSpan="3"
+               Grid.Row="2"
+               Grid.RowSpan="3"
+               Source="/Resurses/hudi.jpg"/>
         <CheckBox VerticalAlignment="Center"
                   x:Name="RightCb"
-                  Grid.Column="1"
+                  Grid.Column="3"
+                  Checked="RightCb_Checked"
                   Grid.Row="2"
                   Grid.ColumnSpan="4"
-                  HorizontalAlignment="Center">
+                  HorizontalAlignment="Left">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2"
                                     ScaleY="2"/>
             </CheckBox.LayoutTransform>
-            <TextBlock Text="RegularFit"
-                       VerticalAlignment="Center"/>
-        </CheckBox>
-        <CheckBox VerticalAlignment="Center"
-                  x:Name="UnRightCb"
-                  Grid.Column="1"
-                  Grid.Row="3"
-                  Grid.ColumnSpan="4"
-                  HorizontalAlignment="Center">
-            <CheckBox.LayoutTransform>
-                <ScaleTransform ScaleX="2"
-                                    ScaleY="2"/>
-            </CheckBox.LayoutTransform>
-            <TextBlock Text="Normal    "
+            <TextBlock Text="Худи"
                        VerticalAlignment="Center"/>
         </CheckBox>
         <CheckBox VerticalAlignment="Center"
                   x:Name="UnRightCb2"
-                  Grid.Column="1"
-                  Grid.Row="4"
+                  Grid.Column="3"
+                  Checked="UnRightCb2_Checked"
+                  Grid.Row="3"
                   Grid.ColumnSpan="4"
-                  HorizontalAlignment="Center">
+                  HorizontalAlignment="Left">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2"
                                     ScaleY="2"/>
             </CheckBox.LayoutTransform>
-            <TextBlock Text="SlimFit     "
+            <TextBlock Text="Палаццо"
+                       VerticalAlignment="Center"/>
+        </CheckBox>
+        <CheckBox VerticalAlignment="Center"
+                  x:Name="UnRightCb"
+                  Checked="UnRightCb_Checked"
+                  Grid.Column="3"
+                  Grid.Row="4"
+                  Grid.ColumnSpan="4"
+                  HorizontalAlignment="Left">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2"
+                                    ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+            <TextBlock Text="Свитшот"
                        VerticalAlignment="Center"/>
         </CheckBox>
     </Grid>

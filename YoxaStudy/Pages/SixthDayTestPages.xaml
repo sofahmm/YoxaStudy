@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:YoxaStudy.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="SixthDayTestPages">
+      Title="Шестой день обучения: итоговый тест">
 
     <Grid>
         <Grid.ColumnDefinitions>

@@ -47,6 +47,7 @@
           <Property Name="IsVisible" Type="bit" />
           <Property Name="Login" Type="nvarchar" MaxLength="8" />
           <Property Name="Password" Type="nvarchar" MaxLength="8" />
+          <Property Name="Counter" Type="int" />
         </EntityType>
         <EntityType Name="StajerDay">
           <Key>
@@ -410,6 +411,7 @@
           <Property Name="IsVisible" Type="Boolean" />
           <Property Name="Login" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="Counter" Type="Int32" />
         </EntityType>
         <EntityType Name="StajerTask">
           <Key>
@@ -777,6 +779,7 @@
           <EntitySetMapping Name="Stajer">
             <EntityTypeMapping TypeName="DiplomModel.Stajer">
               <MappingFragment StoreEntitySet="Stajer">
+                <ScalarProperty Name="Counter" ColumnName="Counter" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
                 <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:YoxaStudy.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="FivesDayBuilsingsPages">
+      Title="Пятый день обучения: сборка на маркетплейсы">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -167,7 +167,7 @@
                             Grid.ColumnSpan="2"
                             Grid.Row="2"
                             TextAlignment="Center"/>
-                <TextBlock Text="Перед тем как упаковать изделие, необходимо погладить и отпарить его. Особое внимание уделите швам. От первой глажки изделия зависит то, как оно будет выглядеть в дальнейшем на человеке."
+                <TextBlock Text="Теперь необходимо сложить изделия. Здесь обращаем внимание на то, чтобы получить в дальнейшем эстетично-сложенный товар."
                             FontSize="22"
                             TextWrapping="Wrap"
                             Grid.ColumnSpan="6"
@@ -176,12 +176,12 @@
                             Grid.RowSpan="2"
                             TextAlignment="Center"/>
 
-                <Image Source="/Resurses/iron.jpeg"
+                <Image Source="/Resurses/punkt2.jpg"
                     Height="400"
                     Width="800"
                     Margin="0 50 0 0"/>
 
-                <TextBlock Text="Пункт №1 "
+                <TextBlock Text="Пункт №3 "
                             FontSize="24"
                             Margin="0 30 0 0"
                             FontWeight="DemiBold"
@@ -189,7 +189,7 @@
                             Grid.ColumnSpan="2"
                             Grid.Row="2"
                             TextAlignment="Center"/>
-                <TextBlock Text="Перед тем как упаковать изделие, необходимо погладить и отпарить его. Особое внимание уделите швам. От первой глажки изделия зависит то, как оно будет выглядеть в дальнейшем на человеке."
+                <TextBlock Text="Упаковываем сложенное изделие. Вам предоставят целлофановые пакеты с клейким концом. Необходимо упаковать так, чтобы лицевая сторона изделия прилегала к длинной части пакета с клейкой лентой. Не забудьте вытащить на видное место логотип нашего бренда."
                             FontSize="22"
                             TextWrapping="Wrap"
                             Grid.ColumnSpan="6"
@@ -198,12 +198,12 @@
                             Grid.RowSpan="2"
                             TextAlignment="Center"/>
 
-                <Image Source="/Resurses/iron.jpeg"
+                <Image Source="/Resurses/punkt3.jpg"
                     Height="400"
                     Width="800"
                     Margin="0 50 0 0"/>
 
-                <TextBlock Text="Пункт №1 "
+                <TextBlock Text="Пункт №4 "
                             FontSize="24"
                             Margin="0 30 0 0"
                             FontWeight="DemiBold"
@@ -211,7 +211,7 @@
                             Grid.ColumnSpan="2"
                             Grid.Row="2"
                             TextAlignment="Center"/>
-                <TextBlock Text="Перед тем как упаковать изделие, необходимо погладить и отпарить его. Особое внимание уделите швам. От первой глажки изделия зависит то, как оно будет выглядеть в дальнейшем на человеке."
+                <TextBlock Text="После упаковки маркируем и относим на склад, либо оставляем рядом со своим столом, чтобы мастер сам забрал."
                             FontSize="22"
                             TextWrapping="Wrap"
                             Grid.ColumnSpan="6"
@@ -220,10 +220,33 @@
                             Grid.RowSpan="2"
                             TextAlignment="Center"/>
 
-                <Image Source="/Resurses/iron.jpeg"
-                    Height="400"
-                    Width="800"
-                    Margin="0 50 0 0"/>
+                <CheckBox Grid.Column="5"
+                  x:Name="doneCb"
+                  HorizontalAlignment="Center"
+                  Grid.ColumnSpan="2"
+                  Content=" изучено"
+                  FontSize="12"
+                  HorizontalContentAlignment="Center"
+                  Style="{StaticResource MaterialDesignFilterChipCheckBox}"
+                  Grid.Row="5" Cursor="Hand"
+                  Checked="doneCb_Checked">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+                <TextBlock Text="Ты молодец! Осталось пройти тест и ты готов!"
+                   Grid.Column="5"
+                   Margin="0 0 10 0"
+                   TextWrapping="Wrap"
+                   x:Name="GoodTb"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="6"
+                   FontSize="22"
+                   TextAlignment="Center"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Grid.RowSpan="5"
+                   Visibility="Hidden"/>
             </StackPanel>
         </ScrollViewer>
        
